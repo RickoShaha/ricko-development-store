@@ -218,7 +218,7 @@
       }
     },
     "404": {
-      "title": "",
+      "title": "Page not found",
       "subtext": "404"
     }
   },
