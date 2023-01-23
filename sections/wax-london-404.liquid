@@ -1,0 +1,239 @@
+<section class="section-wrapper-{{section.id}} error-404-section {{section.settings.content_alignment}}">
+    {%-for block in section.blocks-%}
+      {%-case block.type-%}
+        {%-when 'text1'%}
+          <h1 class="header-wrapper-{{block.id}} error-message-404-header">{{block.settings.header_text_alignment}}</h1>
+        {%-when 'image'%}
+          <div class="image-wrapper-{{block.id}} error-message-image">
+            <img src="{{block.settings.image | img_url: "grande"}}">
+          </div>
+        {%-when 'text2'%}
+          <div class="error-message-paragraph">
+            <div class="paragraph-wrapper-{{block.id}} error-message-paragraph first-paragraph">
+              {{block.settings.p1_text_alignment}}
+            </div>
+            {%- if block.settings.p2_available == true%}
+              <div class="paragraph-wrapper-{{block.id}} error-message-paragraph second-paragraph">
+                {{block.settings.p2_text_alignment}}
+                {%- if block.settings.url_enabled == true -%}
+                  <a href="{{ block.settings.redirect_link }}">{{ block.settings.text_for_link }}</a>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+          </div>
+      {%- endcase -%}
+    {%-endfor-%}
+</section>
+
+<style>
+
+
+  {%-for block in section.blocks-%}
+      {%-case block.type-%}
+        {%-when 'text1'%}
+        .section-wrapper-{{section.id}} .header-wrapper-{{block.id}}.error-message-404-header{
+          font-size: {{ block.settings.header_font_size }}px;
+          font-family: {{ block.settings.header_font_family }};
+          color: {{ block.settings.header_font_color }};
+        }
+        {%-when 'image'%}
+        .section-wrapper-{{section.id}} .image-wrapper-{{block.id}}.error-message-image img{
+          width: 500px;
+          object-fit: cover;
+        }
+        
+        {%-when 'text2'%}
+        .section-wrapper-{{section.id}} .paragraph-wrapper-{{block.id}}.error-message-paragraph.first-paragraph{
+          font-size: {{ block.settings.p1_font_size }}px;
+          font-family: {{ block.settings.p1_font_family }};
+          color: {{ block.settings.p1_font_color }};
+        }
+        .section-wrapper-{{section.id}} .paragraph-wrapper-{{block.id}}.error-message-paragraph.second-paragraph{
+          font-size: {{ block.settings.p2_font_size }}px;
+          font-family: {{ block.settings.p2_font_family }};
+          color: {{ block.settings.p2_font_color }};
+        }
+
+      {%- endcase -%}
+    {%-endfor-%}
+
+</style>
+
+{% schema %}
+{
+  "name": "Wax London 404",
+  "tag": "section",
+  "class": "wax-london-404",
+  "settings": [
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "label": "Content Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+       ],
+       "default" : "center"
+    }
+  ],
+  "blocks":[
+      {
+        "type": "text1",
+        "name": "Header",
+        "settings":[
+          {
+            "type": "text",
+            "id": "header_text_alignment",
+            "label" : "Header Message",
+            "default": "Error 404"
+          },
+          {
+            "type": "font",
+            "id": "header_font_family",
+            "label": "Header Font Family"
+          },
+          {
+            "type" : "color",
+            "id" : "header_font_color",
+            "label": "Header Font Color",
+            "default": "#000000"
+          },
+          {
+            "type": "range",
+            "id": "header_font_size",
+            "label": "Header Font Size",
+            "default": 50,
+            "unit": "px",
+            "min": 10,
+            "max": 100,
+            "step": 1
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "name": "Image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      },
+      {
+        "type": "text2",
+        "name": "Message",
+        "settings":[
+          {
+            "type": "text",
+            "id": "p1_text_alignment",
+            "label" : "First Parargraph",
+            "default": "Error 404 Message Details"
+          },
+          {
+            "type": "font",
+            "id": "p1_font_family",
+            "label": "First Paragraph Font Family"
+          },
+          {
+            "type" : "color",
+            "id" : "p1_font_color",
+            "label": "First Paragraph Font Color",
+            "default": "#000000"
+          },
+          {
+            "type": "range",
+            "id": "p1_font_size",
+            "label": "First Paragraph Font Size",
+            "default": 15,
+            "unit": "px",
+            "min": 10,
+            "max": 100,
+            "step": 1
+          },
+
+          {
+            "type": "checkbox",
+            "id" : "p2_available",
+            "label": "Add another paragraph",
+            "default": false
+          },
+
+
+          {
+            "type": "text",
+            "id": "p2_text_alignment",
+            "label" : "Second Parargraph",
+            "default": "Error 404 Second Message Details"
+          },
+          {
+            "type": "font",
+            "id": "p2_font_family",
+            "label": "Font Family"
+          },
+          {
+            "type" : "color",
+            "id" : "p2_font_color",
+            "label": "Font Color",
+            "default": "#000000"
+          },
+          {
+            "type": "range",
+            "id": "p2_font_size",
+            "label": "Second Paragraph Font Size",
+            "default": 15,
+            "unit": "px",
+            "min": 10,
+            "max": 100,
+            "step": 1
+          },
+          {
+            "type": "checkbox",
+            "id": "url_enabled",
+            "label": "Add an url to redirect",
+            "default": false
+          },
+          {
+            "type": "url",
+            "id": "redirect_link",
+            "label": "Redirect link"
+          },
+          {
+            "type": "text",
+            "id": "text_for_link",
+            "label": "Text for redirect link",
+            "default": "click here to return home."
+          }          
+        ]
+      }
+  ],
+  "presets": [
+    {
+    "name": "Wax London 404",
+    "blocks": [
+      {
+        "type": "text1"
+      },
+      {
+        "type": "image"
+      },
+      {
+        "type": "text2"
+      }
+    ]
+    }
+  ]
+  
+}
+{% endschema %}
