@@ -1,0 +1,171 @@
+<section class="section-wrapper-{{section.id}} single-column-image">
+    {%- for block in section.blocks -%}
+        {%- case block.type -%}
+            {%-when 'image'%}
+                <div class="image-wrapper-{{block.id}} image">
+                    <img src="{{block.settings.image_with_text_image | img_url: 'master'}}">
+                </div>
+                {%- if block.settings.add_captioin == true -%}
+                    <div class="text-wrapper-{{block.id}}">
+                        {{block.settings.caption}}
+                    </div>
+                {%- endif -%}
+            {%- when 'spacer-block' -%}
+                <div class="spacer-wrapper-{{block.id}}">
+                
+                </div>
+        {%- endcase -%}
+    {%- endfor -%}
+</section>
+
+<style>
+
+    {% if section.settings.section_width == "custom" %}
+        .section-wrapper-{{section.id}}{
+            width: {{section.settings.custom_section_width}}px;
+            margin: 0 auto;
+        }
+        {% else %}
+            .section-wrapper-{{section.id}}{
+                width: {{section.settings.section_width}}px;
+                margin: 0 auto;
+            }
+    {% endif %}
+    
+
+    {%- for block in section.blocks -%}
+        {%- case block.type -%}
+            {%-when 'image'%}
+            .section-wrapper-{{section.id}} .image-wrapper-{{block.id}}.image img{
+                width: 100%;
+                object-fit: cover;
+              }
+                {%- if block.settings.add_captioin == true -%}
+                    .section-wrapper-{{section.id}} .text-wrapper-{{block.id}}{
+                        font-size: {{block.settings.caption_font_size}}px;
+                        font-family: {{block.settings.caption_font_family}};
+                        color: {{block.settings.caption_font_color}};
+                    }
+                {%- endif -%}
+            {%- when 'spacer-block' -%}
+                    .section-wrapper-{{section.id}} .spacer-wrapper-{{block.id}}{
+                        height: {{block.settings.spacer_height}}
+                    }
+        {%- endcase -%}
+    {%- endfor -%}
+</style>
+
+{% schema %}
+    {
+        "name": "Single Column Image",
+        "class": "single-column-image",
+        "settings": [
+            {
+                "type": "select",
+                "id": "section_width",
+                "label": "Section Width",
+                "options": [
+                    {
+                        "value": "600",
+                        "label": "Small"
+                    },
+                    {
+                        "value": "900",
+                        "label": "Medium"
+                    },
+                    {
+                        "value": "1200",
+                        "label": "Large"
+                    },
+                    {
+                        "value": "custom",
+                        "label": "Custom"
+                    }
+                ],
+                "default": "900"
+            },
+            {
+                "type": "range",
+                "id": "custom_section_width",
+                "label": "Custom Section Width",
+                "min": 200,
+                "max": 1200,
+                "step": 10,
+                "unit": "px",
+                "default": 600
+            }
+        ],
+        "blocks": [
+            {
+                "type": "image",
+                "name":  "Image",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image_with_text_image",
+                        "label": "Select An Image"
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "add_captioin",
+                        "label": "Add Caption",
+                        "default": false
+                    },
+                    {
+                        "type": "text",
+                        "id": "caption",
+                        "label": "Caption",
+                        "default": "Add a caption here"
+                    },
+                    {
+                        "type": "font",
+                        "id": "caption_font_family",
+                        "label": "Caption Font Family"
+                    },
+                    {
+                        "type": "color",
+                        "id": "caption_font_color",
+                        "label": "Caption Text Color",
+                        "default": "#000000"
+                    },
+                    {
+                        "type": "range",
+                        "id": "caption_font_size",
+                        "min": 10,
+                        "max": 50,
+                        "step": 1,
+                        "unit": "px",
+                        "label": "Caption Font Size",
+                        "default": 15
+                    }   
+                ]
+            },
+            {
+                "type": "spacer-block",
+                "name": "Spacer",
+                "settings":[
+                    {
+                        "type": "range",
+                        "id": "spacer_height",
+                        "min": 0,
+                        "max": 200,
+                        "step": 2,
+                        "unit": "px",
+                        "label": "Spacer Height",
+                        "default": 20
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Single Column Image",
+                "blocks": [
+                    {
+                        "type": "image"
+                    }
+                ]
+            }
+        ]
+    }
+{% endschema %}

@@ -1,0 +1,189 @@
+<section class="section-wrapper-{{section.id}} double-column-text {{section.settings.content_alignment}}">
+    {%- for block in section.blocks -%}
+        {%- case block.type -%}
+            {%- when 'double-text' -%}
+                <div class="double-column-text-wrapper-{{block.id}}">
+                    <div class="first-column-text columns"> {{block.settings.first_column_text}} </div>
+                    <div class="second-column-text columns"> {{block.settings.second_column_text}} </div>
+                </div>
+            {%- when 'spacer-block' -%}
+                <div class="spacer-wrapper-{{block.id}}">
+                
+                </div>
+        {%- endcase -%}
+    {%- endfor -%}
+</section>
+
+<style>
+    .section-wrapper-{{section.id}}{
+        width: {{section.settings.section_width}}px;
+        margin: 0 auto;
+    }
+
+    {%- for block in section.blocks -%}
+        {%- case block.type -%}
+            {%- when 'double-text' -%}
+                .section-wrapper-{{section.id}} .double-column-text-wrapper-{{block.id}}{
+                    display: flex;
+                    justify-content: space-between;
+                }
+                .section-wrapper-{{section.id}} .double-column-text-wrapper-{{block.id}} .columns{
+                    width: 48%;
+                }
+                .section-wrapper-{{section.id}} .double-column-text-wrapper-{{block.id}} .first-column-text{
+                    font-size: {{block.settings.first_column_font_size}}px;
+                    font-family: {{block.settings.first_font_family}};
+                    color: {{block.settings.first_column_font_color}};
+                }
+                .section-wrapper-{{section.id}} .double-column-text-wrapper-{{block.id}} .second-column-text{
+                    font-size: {{block.settings.second_column_font_size}}px;
+                    font-family: {{block.settings.second_font_family}};
+                    color: {{block.settings.second_column_font_color}};
+                }
+            {%- when 'spacer-block' -%}
+                .section-wrapper-{{section.id}} .spacer-wrapper-{{block.id}}{
+                    height: {{block.settings.spacer_height}}
+                }
+                
+                </div>
+        {%- endcase -%}
+    {%- endfor -%}
+</style>
+
+{%- schema -%}
+{
+    "name": "Double Column Text",
+    "tag": "section",
+    "class": "double-column-text",
+    "settings": [
+        {
+            "type": "select",
+            "id": "section_width",
+            "label": "Section Width",
+            "options": [
+                {
+                    "value": "600",
+                    "label": "Small"
+                },
+                {
+                    "value": "967",
+                    "label": "Medium"
+                },
+                {
+                    "value": "1200",
+                    "label": "Large"
+                }
+            ],
+            "default": "967"
+        },
+        {
+            "type": "select",
+            "id": "content_alignment",
+            "label": "Content Alignment",
+            "options": [
+                {
+                    "value": "left",
+                    "label": "Left"
+                },
+                {
+                    "value": "center",
+                    "label": "Center"
+                },
+                {
+                    "value": "right",
+                    "label": "Right"
+                }
+            ],
+            "default": "center"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "double-text",
+            "name": "Double Column Text",
+            "settings":[
+                {
+                    "type": "richtext",
+                    "id": "first_column_text" ,
+                    "label": "First Column Text",
+                    "default": "<p>Change First Column Text</p>"
+                },
+                {
+                    "type": "font",
+                    "id": "first_font_family",
+                    "label": "First Column Font Family"
+                },
+                {
+                    "type": "color",
+                    "id": "first_column_font_color",
+                    "label": "First Column Text Color",
+                    "default": "#000000"
+                },
+                {
+                    "type": "range",
+                    "id": "first_column_font_size",
+                    "min": 10,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "px",
+                    "label": "First Column Font Size",
+                    "default": 15
+                },
+                {
+                    "type": "richtext",
+                    "id": "second_column_text" ,
+                    "label": "Second Column Text",
+                    "default": "<p>Change Second Column Text</p>"
+                },
+                {
+                    "type": "font",
+                    "id": "second_font_family",
+                    "label": "Second Column Font Family"
+                },
+                {
+                    "type": "color",
+                    "id": "second_column_font_color",
+                    "label": "Second Column Text Color",
+                    "default": "#000000"
+                },
+                {
+                    "type": "range",
+                    "id": "second_column_font_size",
+                    "min": 10,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "px",
+                    "label": "Second Column Font Size",
+                    "default": 15
+                }
+            ]
+        },
+        {
+            "type": "spacer-block",
+            "name": "Spacer",
+            "settings":[
+                {
+                    "type": "range",
+                    "id": "spacer_height",
+                    "min": 0,
+                    "max": 200,
+                    "step": 2,
+                    "unit": "px",
+                    "label": "Spacer Height",
+                    "default": 20
+                }
+            ]
+        }
+    ],
+    "presets":[
+        {
+            "name": "Double Column Text",
+            "blocks":[
+                {
+                    "type": "double-text"
+                }
+            ]
+        }
+    ]
+}
+{%- endschema -%}

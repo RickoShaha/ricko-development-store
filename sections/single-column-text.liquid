@@ -1,0 +1,146 @@
+<section class="section-wrapper-{{section.id}} single-column-text {{section.settings.content_alignment}}">
+    {%- for block in section.blocks -%}
+        {%- case block.type -%}
+            {%- when 'text' -%}
+                <div class="single-column-text-wrapper-{{block.id}}">{{block.settings.paragraph}}</div>
+            {%- when 'spacer-block' -%}
+                <div class="spacer-wrapper-{{block.id}}">
+                
+                </div>
+        {%- endcase -%}
+    {%- endfor -%}
+</section>
+
+<style>
+    .section-wrapper-{{section.id}}{
+
+        width: {{section.settings.section_width}}px;
+        margin: 0 auto;
+    }
+    
+    {%- for block in section.blocks -%}
+        {%- case block.type -%}
+            {%- when 'text' -%}
+                .section-wrapper-{{section.id}} .single-column-text-wrapper-{{block.id}}{
+                    font-size: {{block.settings.paragraph_font_size}}px;
+                    font-family: {{block.settings.paragraph_font_family}};
+                    color: {{block.settings.paragraph_font_color}};
+                }
+            {%- when 'spacer-block' -%}
+                .section-wrapper-{{section.id}} .spacer-wrapper-{{block.id}}{
+                    height: {{block.settings.spacer_height}}px;
+                }
+        {%- endcase -%}
+    {%- endfor -%}
+</style>
+
+{% schema %}
+{
+    "name": "Single Column Text",
+    "tag": "section",
+    "class": "single-column-text",
+    "settings": [
+        {
+            "type": "select",
+            "id": "section_width",
+            "label": "Section Width",
+            "options": [
+                {
+                    "value": "600",
+                    "label": "Small"
+                },
+                {
+                    "value": "967",
+                    "label": "Medium"
+                },
+                {
+                    "value": "1200",
+                    "label": "Large"
+                }
+            ],
+            "default": "967"
+        },
+        {
+            "type": "select",
+            "id": "content_alignment",
+            "label": "Content Alignment",
+            "options": [
+                {
+                    "value": "left",
+                    "label": "Left"
+                },
+                {
+                    "value": "center",
+                    "label": "Center"
+                },
+                {
+                    "value": "right",
+                    "label": "Right"
+                }
+            ],
+            "default": "center"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "text",
+            "name": "Single Column Text",
+            "settings": [
+                {
+                    "type": "richtext",
+                    "id": "paragraph",
+                    "label": "Paragraph",
+                    "default": "<p>Lorem Ipsum<p>"
+                },
+                {
+                    "type": "font",
+                    "id": "paragraph_font_family",
+                    "label": "Font Family"
+                },
+                {
+                    "type": "color",
+                    "id": "paragraph_font_color",
+                    "label": "Paragraph Text Color",
+                    "default": "#000000"
+                },
+                {
+                    "type": "range",
+                    "id": "paragraph_font_size",
+                    "min": 10,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "px",
+                    "label": "Font Size",
+                    "default": 50
+                }              
+            ]
+        },
+        {
+            "type": "spacer-block",
+            "name": "Spacer",
+            "settings":[
+                {
+                    "type": "range",
+                    "id": "spacer_height",
+                    "min": 0,
+                    "max": 200,
+                    "step": 2,
+                    "unit": "px",
+                    "label": "Spacer Height",
+                    "default": 20
+                }
+            ]
+        }
+    ],
+    "presets":[
+        {
+            "name": "Single Column Text",
+            "blocks":[
+                {
+                    "type": "text"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}
