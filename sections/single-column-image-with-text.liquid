@@ -42,14 +42,19 @@
               }
                 {%- if block.settings.add_captioin == true -%}
                     .section-wrapper-{{section.id}} .text-wrapper-{{block.id}}{
+                        text-align: {{block.settings.caption_alignment}};
                         font-size: {{block.settings.caption_font_size}}px;
                         font-family: {{block.settings.caption_font_family}};
                         color: {{block.settings.caption_font_color}};
                     }
+                    .section-wrapper-{{section.id}} .text-wrapper-{{block.id}} p{
+                        line-height: {{block.settings.caption_line_height}}px;
+                        margin: 0;
+                    }
                 {%- endif -%}
             {%- when 'spacer-block' -%}
                     .section-wrapper-{{section.id}} .spacer-wrapper-{{block.id}}{
-                        height: {{block.settings.spacer_height}}
+                        height: {{block.settings.spacer_height}}px;
                     }
         {%- endcase -%}
     {%- endfor -%}
@@ -70,7 +75,7 @@
                         "label": "Small"
                     },
                     {
-                        "value": "900",
+                        "value": "967",
                         "label": "Medium"
                     },
                     {
@@ -82,7 +87,7 @@
                         "label": "Custom"
                     }
                 ],
-                "default": "900"
+                "default": "967"
             },
             {
                 "type": "range",
@@ -112,10 +117,10 @@
                         "default": false
                     },
                     {
-                        "type": "text",
+                        "type": "richtext",
                         "id": "caption",
                         "label": "Caption",
-                        "default": "Add a caption here"
+                        "default": "<p>Add a caption here</p>"
                     },
                     {
                         "type": "font",
@@ -137,7 +142,37 @@
                         "unit": "px",
                         "label": "Caption Font Size",
                         "default": 15
-                    }   
+                    },
+                    {
+                        "type": "select",
+                        "id": "caption_alignment",
+                        "label": "Caption Alignment",
+                        "options": [
+                            {
+                                "value": "left",
+                                "label": "Left"
+                            },
+                            {
+                                "value": "center",
+                                "label": "Center"
+                            },
+                            {
+                                "value": "right",
+                                "label": "Right"
+                            }
+                        ],
+                        "default": "left"
+                    },
+                    {
+                        "type": "range",
+                        "id": "caption_line_height",
+                        "min": 0,
+                        "max": 200,
+                        "step": 2,
+                        "unit": "px",
+                        "label": "Line Height",
+                        "default": 0
+                    }  
                 ]
             },
             {
