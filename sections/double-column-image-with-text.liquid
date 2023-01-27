@@ -3,14 +3,19 @@
         {%- case block.type -%}
             {%-when 'image'%}
                 <div class="image-wrapper-{{block.id}} double-image">
-                    {% comment %} <img src="{{block.settings.image_with_text_image | img_url: 'master'}}"> {% endcomment %}
+                    
                 
                 {%- if block.settings.background_enable_image1 == true -%}
                     <div class="background-image-wrapper-{{block.id}} background-enabled-image1-{{block.id}}">
                 {%- endif -%}
+                    
+                
                         <div class="image-wrapper-{{block.id}} image1">
                             <img src="{{block.settings.first_image | img_url: 'master'}}">
                         </div>
+
+                        
+                        
                 {%- if block.settings.background_enable_image1 == true -%}
                     </div>
                 {%- endif -%}
@@ -21,10 +26,25 @@
                         <div class="image-wrapper-{{block.id}} image2">
                             <img src="{{block.settings.second_image | img_url: 'master'}}">
                         </div>
+                       
                 {%- if block.settings.background_enable_image2 == true -%}
                     </div>
                 {%- endif -%}
                     
+                </div>
+
+                <div class="caption-wrapper-{{block.id}}">
+                    <div class="first-caption-wrapper-{{block.id}} caption1">
+
+                        
+                            {{block.settings.caption_image1}}
+                        
+                    </div>
+                    <div class="second-caption-wrapper-{{block.id}} caption2">
+                        
+                            {{block.settings.caption_image2}}
+                        
+                    </div>
                 </div>
             {%- when 'spacer-block' -%}
                 <div class="spacer-wrapper-{{block.id}}">
@@ -54,66 +74,221 @@
     {%- for block in section.blocks -%}
         {%- case block.type -%}
             {%-when 'image'%}
-                .section-wrapper-{{section.id}} .image-wrapper-{{block.id}}.double-image{
-                    width: 100%;
-                    display: flex;
-                }
+
+                {%- if section.settings.section_width == "custom" -%}
+                    .section-wrapper-{{section.id}} .image-wrapper-{{block.id}}.double-image{
+                        height: {{section.settings.custom_section_width | times: 0.625 }}px;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                        {%- if block.settings.switch_images == true -%}
+                            .section-wrapper-{{section.id}} .image-wrapper-{{block.id}}.double-image{
+                                flex-direction: row-reverse;
+                            }
+                        {%- endif -%}
+
+                        {%- if block.settings.gap_enabled == true -%}
+                            .section-wrapper-{{section.id}} .image-wrapper-{{block.id}}.double-image{
+                                column-gap: {{block.settings.gap_images_size}}px;
+                            }
+                        {%- endif -%}
+
+                    {%- else -%}
+                    .section-wrapper-{{section.id}} .image-wrapper-{{block.id}}.double-image{
+                        height: {{section.settings.section_width | times: 0.625 }}px;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                        {%- if block.settings.switch_images == true -%}
+                            .section-wrapper-{{section.id}} .image-wrapper-{{block.id}}.double-image{
+                                flex-direction: row-reverse;
+                            }
+                        {%- endif -%}
+                        {%- if block.settings.gap_enabled == true -%}
+                            .section-wrapper-{{section.id}} .image-wrapper-{{block.id}}.double-image{
+                                column-gap: {{block.settings.gap_images_size}}px;
+                            }
+                        {%- endif -%}
+
+                {%-  endif -%}
+                
                 
                 {%- if block.settings.background_enable_image1 == true -%}
                     .background-image-wrapper-{{block.id}}.background-enabled-image1-{{block.id}}{
+                        height: 100%;
                         width: 50%;
                         background: {{block.settings.background_color_image1}};
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: {{block.settings.background_enabled_image1_padding}}%;
                     }
                         {%- if section.settings.section_width == "custom" -%}
                             .image-wrapper-{{block.id}}.image1{
-                                width: {{block.settings.background_enabled_image1_width}}px;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                {% comment %} width: {{block.settings.background_enabled_image1_width}}px; {% endcomment %}
                                 max-width: {{section.settings.custom_section_width | divided_by: 2}}px;
+                                {% comment %} margin: 0 auto; {% endcomment %}
                             }
                         {%- else -%}
                             .image-wrapper-{{block.id}}.image1{
-                                width: {{block.settings.background_enabled_image1_width}}px;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                {% comment %} width: {{block.settings.background_enabled_image1_width}}px; {% endcomment %}
                                 max-width: {{section.settings.section_width | divided_by: 2}}px;
+                                {% comment %} margin: 0 auto; {% endcomment %}
                             }
                         {%- endif -%}
                 {%- else -%}
                     .image-wrapper-{{block.id}}.image1{
+                        height: 100%;
                         width: 50%;
                     }
                 {%- endif -%}
                         .image-wrapper-{{block.id}}.image1 img{
                             width: 100%;
+                            height: 100%;
+                            object-fit: cover;
                         }
-                        {% comment %} <div class="image-wrapper-{{block.id}} image1">
-                            <img src="{{block.settings.first_image | img_url: 'master'}}">
-                        </div> {% endcomment %}
-                {% comment %} {%- if block.settings.background_enable_image1 == true -%}
-                    </div>
-                {%- endif -%} {% endcomment %}
+                        {% comment %} {%- if block.settings.add_captioin_image1 == true -%}
+                            .caption-wrapper-{{block.id}}.caption1{
+                                font-size: {{block.settings.caption_font_size_image1}}px;
+                                font-family: {{block.settings.caption_font_family_image1}};
+                                color: {{block.settings.caption_font_color_image1}};
+                                text-align: {{block.settings.caption_alignment_image1}};
+                            }
+                        {%- endif -%} {% endcomment %}
+                       
 
                 {%- if block.settings.background_enable_image2 == true -%}
                     .background-image-wrapper-{{block.id}}.background-enabled-image2-{{block.id}}{
+                        height: 100%;
                         width: 50%;
                         background: {{block.settings.background_color_image2}};
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: {{block.settings.background_enabled_image2_padding}}%;
                     }
                         {%- if section.settings.section_width == "custom" -%}
                             .image-wrapper-{{block.id}}.image2{
-                                width: {{block.settings.background_enabled_image2_width}}px;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                {% comment %} width: {{block.settings.background_enabled_image2_width}}px; {% endcomment %}
                                 max-width: {{section.settings.custom_section_width | divided_by: 2}}px;
+                                {% comment %} margin: 0 auto; {% endcomment %}
                             }
                         {%- else -%}
                             .image-wrapper-{{block.id}}.image2{
-                                width: {{block.settings.background_enabled_image2_width}}px;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                {% comment %} width: {{block.settings.background_enabled_image2_width}}px; {% endcomment %}
                                 max-width: {{section.settings.section_width | divided_by: 2}}px;
+                                {% comment %} margin: 0 auto; {% endcomment %}
                             }
                         {%- endif -%}
                 {%- else -%}
                     .image-wrapper-{{block.id}}.image2{
+                        height: 100%;
                         width: 50%;
                     }
                 {%- endif -%}
                         .image-wrapper-{{block.id}}.image2 img{
                             width: 100%;
+                            height: 100%;
+                            object-fit: cover;
                         }
+                       
+
+                        .caption-wrapper-{{block.id}} .first-caption-wrapper-{{block.id}}.caption1 p{
+                            text-align: {{block.settings.caption_alignment_image1}};
+                        }
+                        .caption-wrapper-{{block.id}} .second-caption-wrapper-{{block.id}}.caption2 p{
+                            text-align: {{block.settings.caption_alignment_image2}};
+                        }
+
+                        {%- if block.settings.switch_images == true -%}
+                            .caption-wrapper-{{block.id}}{
+                                display: flex;
+                                flex-direction: row-reverse;
+                            }
+                            {%- else -%}
+                            .caption-wrapper-{{block.id}}{
+                                display: flex;
+                                flex-direction: row;
+                            }
+                        {%- endif -%}
+
+                        {%- if block.settings.gap_enabled == true -%}
+                            .caption-wrapper-{{block.id}}{
+                                column-gap: {{block.settings.gap_images_size}}px;
+                            }
+                        {%- endif -%}
+
+                        {%- if block.settings.add_captioin_image1 == false and block.settings.add_captioin_image2 == false -%}
+                            .caption-wrapper-{{block.id}}{
+                                display: none;
+                            }
+                            {%- else -%}
+                            
+
+                            .caption-wrapper-{{block.id}} .first-caption-wrapper-{{block.id}}.caption1{
+                                width: 50%;
+                            }
+
+                            .caption-wrapper-{{block.id}} .second-caption-wrapper-{{block.id}}.caption2{
+                                width: 50%;
+                            }
+
+                            {%- if block.settings.add_captioin_image1 == true -%}
+                                .caption-wrapper-{{block.id}} .first-caption-wrapper-{{block.id}}.caption1{
+                                    {% comment %} width: 50%; {% endcomment %}
+                                    font-size: {{block.settings.caption_font_size_image1}}px;
+                                    font-family: {{block.settings.caption_font_family_image1}};
+                                    color: {{block.settings.caption_font_color_image1}};
+                                    
+                                }
+                                
+                                {%- else -%}
+                                .caption-wrapper-{{block.id}} .first-caption-wrapper-{{block.id}}.caption1{
+                                    {% comment %} width: 50%; {% endcomment %}
+                                    visibility: hidden; 
+                                }
+                            {%- endif -%}
+                            {%- if block.settings.add_captioin_image2 == true -%}
+                                .caption-wrapper-{{block.id}} .sceond-caption-wrapper-{{block.id}}.caption2{
+                                    {% comment %} width: 50%; {% endcomment %}
+                                    font-size: {{block.settings.caption_font_size_image2}}px;
+                                    font-family: {{block.settings.caption_font_family_image2}};
+                                    color: {{block.settings.caption_font_color_image2}};
+                                    
+                                }
+                                
+                                {%- else -%}
+                                .caption-wrapper-{{block.id}} .second-caption-wrapper-{{block.id}}.caption2{
+                                    {% comment %} width: 50%; {% endcomment %}
+                                    visibility: hidden; 
+                                }
+                            {%- endif -%}
+                                
+                                
+                            {%- endif -%}
+                    
+
             {%- when 'spacer-block' -%}
                 .section-wrapper-{{section.id}} .spacer-wrapper-{{block.id}}{
                     height: {{block.settings.spacer_height}}px;
@@ -184,13 +359,13 @@
                     },
                     {
                         "type": "range",
-                        "id": "background_enabled_image1_width",
-                        "min": 100,
-                        "max": 600,
-                        "step": 5,
-                        "unit": "px",
-                        "label": "First Image Width(Applicable if background color is selected)",
-                        "default": 250
+                        "id": "background_enabled_image1_padding",
+                        "min": 0,
+                        "max": 15,
+                        "step": 1,
+                        "unit": "%",
+                        "label": "First Image Padding(Applicable if background color is selected)",
+                        "default": 6
                     },
                     {
                         "type": "image_picker",
@@ -303,13 +478,13 @@
                     },
                     {
                         "type": "range",
-                        "id": "background_enabled_image2_width",
-                        "min": 100,
-                        "max": 600,
-                        "step": 5,
-                        "unit": "px",
-                        "label": "Second Image Width(Applicable if background color is selected)",
-                        "default": 250
+                        "id": "background_enabled_image2_padding",
+                        "min": 0,
+                        "max": 15,
+                        "step": 1,
+                        "unit": "%",
+                        "label": "Second Image Padding(Applicable if background color is selected)",
+                        "default": 6
                     },
                     {
                         "type": "image_picker",
