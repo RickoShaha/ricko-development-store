@@ -1,1 +1,618 @@
-{"sections":{"main":{"type":"main-article","blocks":{"featured_image":{"type":"featured_image","settings":{"image_height":"adapt"}},"title":{"type":"title","settings":{"blog_show_date":true,"blog_show_author":false}},"share":{"type":"share","settings":{"share_label":"Share"}},"content":{"type":"content","settings":{}}},"block_order":["featured_image","title","share","content"],"settings":{}}},"order":["main"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "featured_image": {
+          "type": "featured_image",
+          "settings": {
+            "image_height": "adapt"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "blog_show_date": true,
+            "blog_show_author": false
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "featured_image",
+        "title",
+        "share",
+        "content"
+      ],
+      "settings": {
+      }
+    },
+    "8dffdb6c-3382-411e-8c3f-ee0959cafacb": {
+      "type": "single-column-text",
+      "blocks": {
+        "template--17629556736315__8dffdb6c-3382-411e-8c3f-ee0959cafacb-1675065312d4adb823-0": {
+          "type": "text",
+          "settings": {
+            "paragraph": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu euismod ante, quis finibus odio. Aenean scelerisque consectetur pharetra. In condimentum est eu eros malesuada aliquam.<\/p>",
+            "paragraph_font_family": "",
+            "paragraph_font_color": "#333333",
+            "paragraph_font_size": 24
+          }
+        },
+        "cae80e5f-6c6b-4a81-b625-091bb2d117e5": {
+          "type": "text",
+          "settings": {
+            "paragraph": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu euismod ante, quis finibus odio. Aenean scelerisque consectetur pharetra. In condimentum est eu eros malesuada aliquam. Aenean iaculis ligula a quam vehicula mattis. Nulla fringilla bibendum erat id molestie. Quisque id arcu in libero euismod rutrum sed ut libero. Nunc et dolor non ex elementum varius vel ut ligula. Sed id felis ex. Aenean tristique lobortis est, vitae consequat turpis sagittis varius. Quisque pharetra, dui ornare iaculis consectetur, magna velit condimentum nulla, non tristique nisl lorem ac risus. Cras accumsan eu est in dignissim. Aenean ligula felis, rutrum in augue quis, consectetur porta libero.<\/p><p>Nunc faucibus ornare risus nec accumsan. Donec sed nisi rutrum, mattis diam a, tempus risus. Morbi at lectus elementum, laoreet orci sit amet, rutrum ipsum. Integer vel aliquet risus, sed pharetra justo. Pellentesque commodo eu quam vel hendrerit. Mauris non turpis fermentum, faucibus nulla quis, convallis nulla. Ut efficitur metus eros, quis consequat nunc tincidunt et. Sed eleifend arcu vel porta cursus. Mauris ultrices mauris vel lacus hendrerit sodales. Quisque a mattis turpis. Sed nisl purus, malesuada.<\/p>",
+            "paragraph_font_family": "Helvetica, Arial, sans-serif",
+            "paragraph_font_color": "#333333",
+            "paragraph_font_size": 15
+          }
+        },
+        "3e31dae6-ff32-4c8b-aeee-6dc021cc71de": {
+          "type": "spacer-block",
+          "settings": {
+            "spacer_height": 80
+          }
+        }
+      },
+      "block_order": [
+        "template--17629556736315__8dffdb6c-3382-411e-8c3f-ee0959cafacb-1675065312d4adb823-0",
+        "cae80e5f-6c6b-4a81-b625-091bb2d117e5",
+        "3e31dae6-ff32-4c8b-aeee-6dc021cc71de"
+      ],
+      "settings": {
+        "section_width": "600",
+        "content_alignment": "left"
+      }
+    },
+    "83ce739c-897d-4027-98a6-986897d5785a": {
+      "type": "double-column-text",
+      "blocks": {
+        "template--17629556736315__83ce739c-897d-4027-98a6-986897d5785a-16750654750023d120-0": {
+          "type": "double-text",
+          "settings": {
+            "first_column_text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu euismod ante, quis finibus odio. Aenean scelerisque consectetur pharetra. In condimentum est eu eros malesuada aliquam. Aenean iaculis ligula a quam vehicula mattis. Nulla fringilla bibendum erat id molestie. Quisque id arcu in libero euismod rutrum sed ut libero. Nunc et dolor non ex elementum varius vel ut ligula. Sed id felis ex. Aenean tristique lobortis est, vitae consequat turpis sagittis varius. Quisque pharetra, dui ornare iaculis consectetur, magna velit condimentum nulla, non tristique nisl lorem ac risus. Cras accumsan eu est in dignissim.<\/p>",
+            "first_font_family": "",
+            "first_column_font_color": "#333333",
+            "first_column_font_size": 15,
+            "second_column_text": "<p>Aenean ligula felis, rutrum in augue quis, consectetur porta libero. Sed eleifend arcu vel porta cursus. Nunc faucibus ornare risus nec accumsan. Donec sed nisi rutrum, mattis diam a, tempus risus. Morbi at lectus elementum, laoreet orci sit amet, rutrum ipsum. Integer vel aliquet risus, sed pharetra justo. Pellentesque commodo eu quam vel hendrerit. Mauris non turpis fermentum, faucibus nulla quis, convallis nulla. Ut efficitur metus eros, quis consequat nunc tincidunt et. Quisque a mattis turpis. Sed nisl purus, malesuada.<\/p>",
+            "second_font_family": "",
+            "second_column_font_color": "#333333",
+            "second_column_font_size": 15
+          }
+        },
+        "8a001745-360e-4c5f-aaa0-d2ba2e32436b": {
+          "type": "spacer-block",
+          "settings": {
+            "spacer_height": 80
+          }
+        }
+      },
+      "block_order": [
+        "template--17629556736315__83ce739c-897d-4027-98a6-986897d5785a-16750654750023d120-0",
+        "8a001745-360e-4c5f-aaa0-d2ba2e32436b"
+      ],
+      "settings": {
+        "section_width": "967",
+        "content_alignment": "left"
+      }
+    },
+    "824cc8d2-bbde-4abc-84a0-82053720f554": {
+      "type": "single-column-image-with-text",
+      "blocks": {
+        "template--17629556736315__824cc8d2-bbde-4abc-84a0-82053720f554-1675065813c9adb45f-0": {
+          "type": "image",
+          "settings": {
+            "image_with_text_image": "shopify:\/\/shop_images\/04-10-2022-WAX1465-Square.jpg",
+            "add_captioin": true,
+            "caption": "<p>Model wears <a href=\"\/products\/adidas-classic-backpack\" target=\"_blank\" title=\"ADIDAS | CLASSIC BACKPACK\">Whiting Shirt Cosmic Papaya Check<\/a> with <a href=\"\/products\/dr-martens-1460z-dmc-8-eye-boot-cherry-smooth\" target=\"_blank\" title=\"DR MARTENS | 1460Z DMC 8-EYE BOOT | CHERRY SMOOTH\">Dean T Shirt Black<\/a> and <a href=\"\/products\/puma-suede-classic-regal\" target=\"_blank\" title=\"PUMA | SUEDE CLASSIC REGAL\">Pleat Trousers Black<\/a><\/p>",
+            "caption_font_family": "",
+            "caption_font_color": "#000000",
+            "caption_font_size": 12,
+            "caption_alignment": "left",
+            "caption_line_height": 20
+          }
+        },
+        "05644244-bcd4-44ae-9ca5-3962393c4574": {
+          "type": "spacer-block",
+          "settings": {
+            "spacer_height": 40
+          }
+        }
+      },
+      "block_order": [
+        "template--17629556736315__824cc8d2-bbde-4abc-84a0-82053720f554-1675065813c9adb45f-0",
+        "05644244-bcd4-44ae-9ca5-3962393c4574"
+      ],
+      "settings": {
+        "section_width": "600",
+        "custom_section_width": 600
+      }
+    },
+    "a4490867-64ea-4550-b333-fe235f0258ba": {
+      "type": "single-column-image-with-text",
+      "blocks": {
+        "a0d90038-e34e-4869-83c8-e794def25966": {
+          "type": "spacer-block",
+          "settings": {
+            "spacer_height": 80
+          }
+        },
+        "template--17629556736315__a4490867-64ea-4550-b333-fe235f0258ba-1675065813c9adb45f-0": {
+          "type": "image",
+          "settings": {
+            "image_with_text_image": "shopify:\/\/shop_images\/04-10-2022-WAX1465-Square.jpg",
+            "add_captioin": true,
+            "caption": "<p>Model wears <a href=\"\/products\/asics-tiger-gel-lyte-v-30-years-of-gel-pack\" target=\"_blank\" title=\"ASICS TIGER | GEL-LYTE V '30 YEARS OF GEL' PACK\">Whiting Shirt Cosmic Papaya Check<\/a> with <a href=\"\/products\/converse-chuck-taylor-all-star-ii-hi\" target=\"_blank\" title=\"CONVERSE | CHUCK TAYLOR ALL STAR II HI\">Dean T Shirt Black<\/a> and <a href=\"\/products\/nike-swoosh-pro-flat-peak-cap\" target=\"_blank\" title=\"NIKE | SWOOSH PRO FLAT PEAK CAP\">Pleat Trousers Black<\/a><\/p>",
+            "caption_font_family": "",
+            "caption_font_color": "#000000",
+            "caption_font_size": 12,
+            "caption_alignment": "left",
+            "caption_line_height": 10
+          }
+        },
+        "891d1ab7-c377-4684-a78a-850bd12a8d03": {
+          "type": "spacer-block",
+          "settings": {
+            "spacer_height": 40
+          }
+        }
+      },
+      "block_order": [
+        "a0d90038-e34e-4869-83c8-e794def25966",
+        "template--17629556736315__a4490867-64ea-4550-b333-fe235f0258ba-1675065813c9adb45f-0",
+        "891d1ab7-c377-4684-a78a-850bd12a8d03"
+      ],
+      "settings": {
+        "section_width": "967",
+        "custom_section_width": 600
+      }
+    },
+    "dd8895e2-eb4d-4e0e-9c6d-c8598a8fea9c": {
+      "type": "single-column-image-with-text",
+      "blocks": {
+        "template--17629556736315__dd8895e2-eb4d-4e0e-9c6d-c8598a8fea9c-1675065813c9adb45f-0": {
+          "type": "image",
+          "settings": {
+            "image_with_text_image": "shopify:\/\/shop_images\/04-10-2022-WAX1465-Square.jpg",
+            "add_captioin": true,
+            "caption": "<p>Model wears <a href=\"\/products\/adidas-kids-stan-smith\" target=\"_blank\" title=\"ADIDAS | KID'S STAN SMITH\">Whiting Shirt Cosmic Papaya Check<\/a> with <a href=\"\/products\/converse-chuck-taylor-all-star-ii-hi\" target=\"_blank\" title=\"CONVERSE | CHUCK TAYLOR ALL STAR II HI\">Dean T Shirt Black<\/a> and <a href=\"\/products\/vans-authentic-butterfly-true-white-black\" target=\"_blank\" title=\"VANS | AUTHENTIC (BUTTERFLY) TRUE | WHITE \/ BLACK\">Pleat Trousers Black<\/a><\/p>",
+            "caption_font_family": "",
+            "caption_font_color": "#000000",
+            "caption_font_size": 12,
+            "caption_alignment": "center",
+            "caption_line_height": 10
+          }
+        },
+        "8c3fae0e-a51e-4a5d-b623-c91667eb9ed8": {
+          "type": "spacer-block",
+          "settings": {
+            "spacer_height": 40
+          }
+        }
+      },
+      "block_order": [
+        "template--17629556736315__dd8895e2-eb4d-4e0e-9c6d-c8598a8fea9c-1675065813c9adb45f-0",
+        "8c3fae0e-a51e-4a5d-b623-c91667eb9ed8"
+      ],
+      "settings": {
+        "section_width": "1200",
+        "custom_section_width": 600
+      }
+    },
+    "9f4ae1bf-628d-4e69-a4b3-6b3116be98f0": {
+      "type": "double-column-image-with-text",
+      "blocks": {
+        "template--17629556736315__9f4ae1bf-628d-4e69-a4b3-6b3116be98f0-1675066501dd463df2-0": {
+          "type": "image",
+          "settings": {
+            "background_enable_image1": false,
+            "background_color_image1": "#ffffff",
+            "background_enabled_image1_padding": 6,
+            "first_image": "shopify:\/\/shop_images\/04-10-2022-WAX1307.jpg",
+            "add_captioin_image1": false,
+            "caption_image1": "<p>Add caption for first image<\/p>",
+            "caption_font_family_image1": "",
+            "caption_font_color_image1": "#000000",
+            "caption_font_size_image1": 15,
+            "caption_alignment_image1": "left",
+            "caption_line_height_image1": 0,
+            "switch_images": false,
+            "gap_enabled": false,
+            "gap_images_size": 50,
+            "background_enable_image2": false,
+            "background_color_image2": "#ffffff",
+            "background_enabled_image2_padding": 6,
+            "second_image": "shopify:\/\/shop_images\/04-10-2022-WAX1517.jpg",
+            "add_captioin_image2": false,
+            "caption_image2": "<p>Add caption for second image<\/p>",
+            "caption_font_family_image2": "",
+            "caption_font_color_image2": "#000000",
+            "caption_font_size_image2": 15,
+            "caption_alignment_image2": "left",
+            "caption_line_height_image2": 0
+          }
+        },
+        "3bebaad1-4a21-4cf2-855b-099f75d175dd": {
+          "type": "spacer-block",
+          "settings": {
+            "spacer_height": 40
+          }
+        },
+        "f0f75446-0abf-4f1e-b617-372704fd52ad": {
+          "type": "image",
+          "settings": {
+            "background_enable_image1": false,
+            "background_color_image1": "#ffffff",
+            "background_enabled_image1_padding": 6,
+            "first_image": "shopify:\/\/shop_images\/04-10-2022-WAX1307.jpg",
+            "add_captioin_image1": false,
+            "caption_image1": "<p>Add caption for first image<\/p>",
+            "caption_font_family_image1": "Helvetica, Arial, sans-serif",
+            "caption_font_color_image1": "#000000",
+            "caption_font_size_image1": 15,
+            "caption_alignment_image1": "left",
+            "caption_line_height_image1": 0,
+            "switch_images": false,
+            "gap_enabled": false,
+            "gap_images_size": 50,
+            "background_enable_image2": true,
+            "background_color_image2": "#ffffff",
+            "background_enabled_image2_padding": 6,
+            "second_image": "shopify:\/\/shop_images\/04-10-2022-WAX1517.jpg",
+            "add_captioin_image2": false,
+            "caption_image2": "<p>Add caption for second image<\/p>",
+            "caption_font_family_image2": "Helvetica, Arial, sans-serif",
+            "caption_font_color_image2": "#000000",
+            "caption_font_size_image2": 15,
+            "caption_alignment_image2": "left",
+            "caption_line_height_image2": 0
+          }
+        },
+        "bf849ac3-7348-4c03-8d3d-54e7671fac16": {
+          "type": "spacer-block",
+          "settings": {
+            "spacer_height": 40
+          }
+        },
+        "5ef5596b-267c-4783-846d-2b59c4713c3d": {
+          "type": "image",
+          "settings": {
+            "background_enable_image1": true,
+            "background_color_image1": "#ffffff",
+            "background_enabled_image1_padding": 6,
+            "first_image": "shopify:\/\/shop_images\/04-10-2022-WAX1307.jpg",
+            "add_captioin_image1": true,
+            "caption_image1": "<p>Model wears <a href=\"\/products\/dr-martens-1461-dmc-3-eye-shoe-black-smooth\" target=\"_blank\" title=\"DR MARTENS | 1461 DMC 3-EYE SHOE | BLACK SMOOTH\">Whiting Shirt Cosmic Papaya Check<\/a> with <a href=\"\/products\/nike-toddler-roshe-one\" target=\"_blank\" title=\"NIKE | TODDLER ROSHE ONE\">Dean T Shirt Black<\/a> and <a href=\"\/products\/nike-crackle-print-tb-tee\" target=\"_blank\" title=\"NIKE | CRACKLE PRINT TB TEE\">Pleat Trousers Black<\/a><\/p>",
+            "caption_font_family_image1": "Helvetica, Arial, sans-serif",
+            "caption_font_color_image1": "#000000",
+            "caption_font_size_image1": 12,
+            "caption_alignment_image1": "left",
+            "caption_line_height_image1": 0,
+            "switch_images": false,
+            "gap_enabled": false,
+            "gap_images_size": 50,
+            "background_enable_image2": false,
+            "background_color_image2": "#ffffff",
+            "background_enabled_image2_padding": 6,
+            "second_image": "shopify:\/\/shop_images\/04-10-2022-WAX1517.jpg",
+            "add_captioin_image2": true,
+            "caption_image2": "<p>Model wears <a href=\"\/products\/adidas-superstar-80s\" target=\"_blank\" title=\"ADIDAS | SUPERSTAR 80S\">Oz Shirt Grey<\/a> and <a href=\"\/products\/flex-fit-mini-ottoman-black\" target=\"_blank\" title=\"FLEX FIT | MINI OTTOMAN BLACK\">Yellow Check<\/a> with <a href=\"\/products\/puma-suede-classic-regal\" target=\"_blank\" title=\"PUMA | SUEDE CLASSIC REGAL\">Fisherman Beanie Khaki <\/a>and <a href=\"\/products\/vans-apparel-and-accessories-classic-super-no-show-socks-3-pack-white\" target=\"_blank\" title=\"VANS APPAREL AND ACCESSORIES | CLASSIC SUPER NO SHOW SOCKS 3 PACK WHITE\">Pleat Trousers Black<\/a><\/p>",
+            "caption_font_family_image2": "Helvetica, Arial, sans-serif",
+            "caption_font_color_image2": "#000000",
+            "caption_font_size_image2": 12,
+            "caption_alignment_image2": "left",
+            "caption_line_height_image2": 0
+          }
+        },
+        "eb171ab0-d222-41b4-aa05-8ed467957505": {
+          "type": "spacer-block",
+          "settings": {
+            "spacer_height": 40
+          }
+        },
+        "c5c59aff-96e9-4c18-bb35-6efe1a5bb9a6": {
+          "type": "image",
+          "settings": {
+            "background_enable_image1": false,
+            "background_color_image1": "#ffffff",
+            "background_enabled_image1_padding": 6,
+            "first_image": "shopify:\/\/shop_images\/04-10-2022-WAX1307.jpg",
+            "add_captioin_image1": false,
+            "caption_image1": "<p>Add caption for first image<\/p>",
+            "caption_font_family_image1": "Helvetica, Arial, sans-serif",
+            "caption_font_color_image1": "#000000",
+            "caption_font_size_image1": 15,
+            "caption_alignment_image1": "left",
+            "caption_line_height_image1": 0,
+            "switch_images": false,
+            "gap_enabled": true,
+            "gap_images_size": 20,
+            "background_enable_image2": false,
+            "background_color_image2": "#ffffff",
+            "background_enabled_image2_padding": 6,
+            "second_image": "shopify:\/\/shop_images\/04-10-2022-WAX1517.jpg",
+            "add_captioin_image2": false,
+            "caption_image2": "<p>Add caption for second image<\/p>",
+            "caption_font_family_image2": "Helvetica, Arial, sans-serif",
+            "caption_font_color_image2": "#591212",
+            "caption_font_size_image2": 12,
+            "caption_alignment_image2": "left",
+            "caption_line_height_image2": 0
+          }
+        },
+        "554b75ec-e138-456f-baaf-83617a39fe21": {
+          "type": "spacer-block",
+          "settings": {
+            "spacer_height": 72
+          }
+        }
+      },
+      "block_order": [
+        "template--17629556736315__9f4ae1bf-628d-4e69-a4b3-6b3116be98f0-1675066501dd463df2-0",
+        "3bebaad1-4a21-4cf2-855b-099f75d175dd",
+        "f0f75446-0abf-4f1e-b617-372704fd52ad",
+        "bf849ac3-7348-4c03-8d3d-54e7671fac16",
+        "5ef5596b-267c-4783-846d-2b59c4713c3d",
+        "eb171ab0-d222-41b4-aa05-8ed467957505",
+        "c5c59aff-96e9-4c18-bb35-6efe1a5bb9a6",
+        "554b75ec-e138-456f-baaf-83617a39fe21"
+      ],
+      "settings": {
+        "section_width": "600",
+        "custom_section_width": 600
+      }
+    },
+    "3224af96-56a4-4e8d-afda-38c3d3f39786": {
+      "type": "double-column-image-with-text",
+      "blocks": {
+        "template--17629556736315__3224af96-56a4-4e8d-afda-38c3d3f39786-1675066501dd463df2-0": {
+          "type": "image",
+          "settings": {
+            "background_enable_image1": false,
+            "background_color_image1": "#ffffff",
+            "background_enabled_image1_padding": 6,
+            "first_image": "shopify:\/\/shop_images\/04-10-2022-WAX1307.jpg",
+            "add_captioin_image1": false,
+            "caption_image1": "<p>Add caption for first image<\/p>",
+            "caption_font_family_image1": "",
+            "caption_font_color_image1": "#000000",
+            "caption_font_size_image1": 15,
+            "caption_alignment_image1": "left",
+            "caption_line_height_image1": 0,
+            "switch_images": false,
+            "gap_enabled": false,
+            "gap_images_size": 50,
+            "background_enable_image2": false,
+            "background_color_image2": "#ffffff",
+            "background_enabled_image2_padding": 6,
+            "second_image": "shopify:\/\/shop_images\/04-10-2022-WAX1517.jpg",
+            "add_captioin_image2": false,
+            "caption_image2": "<p>Add caption for second image<\/p>",
+            "caption_font_family_image2": "",
+            "caption_font_color_image2": "#000000",
+            "caption_font_size_image2": 15,
+            "caption_alignment_image2": "left",
+            "caption_line_height_image2": 0
+          }
+        },
+        "737de971-3415-4330-b224-7340fbbdbe60": {
+          "type": "spacer-block",
+          "settings": {
+            "spacer_height": 60
+          }
+        },
+        "9f66151c-32d1-4676-a6f8-95dac746d38e": {
+          "type": "image",
+          "settings": {
+            "background_enable_image1": false,
+            "background_color_image1": "#ffffff",
+            "background_enabled_image1_padding": 6,
+            "first_image": "shopify:\/\/shop_images\/04-10-2022-WAX1307.jpg",
+            "add_captioin_image1": false,
+            "caption_image1": "<p>Add caption for first image<\/p>",
+            "caption_font_family_image1": "Helvetica, Arial, sans-serif",
+            "caption_font_color_image1": "#000000",
+            "caption_font_size_image1": 15,
+            "caption_alignment_image1": "left",
+            "caption_line_height_image1": 0,
+            "switch_images": false,
+            "gap_enabled": true,
+            "gap_images_size": 20,
+            "background_enable_image2": false,
+            "background_color_image2": "#ffffff",
+            "background_enabled_image2_padding": 6,
+            "second_image": "shopify:\/\/shop_images\/04-10-2022-WAX1517.jpg",
+            "add_captioin_image2": false,
+            "caption_image2": "<p>Add caption for second image<\/p>",
+            "caption_font_family_image2": "Helvetica, Arial, sans-serif",
+            "caption_font_color_image2": "#000000",
+            "caption_font_size_image2": 15,
+            "caption_alignment_image2": "left",
+            "caption_line_height_image2": 0
+          }
+        }
+      },
+      "block_order": [
+        "template--17629556736315__3224af96-56a4-4e8d-afda-38c3d3f39786-1675066501dd463df2-0",
+        "737de971-3415-4330-b224-7340fbbdbe60",
+        "9f66151c-32d1-4676-a6f8-95dac746d38e"
+      ],
+      "settings": {
+        "section_width": "967",
+        "custom_section_width": 600
+      }
+    },
+    "340099fd-7cd9-4dda-a72e-fcf7ee9a6de6": {
+      "type": "single-column-text",
+      "blocks": {
+        "template--17629556736315__340099fd-7cd9-4dda-a72e-fcf7ee9a6de6-1675065312d4adb823-0": {
+          "type": "text",
+          "settings": {
+            "paragraph": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis, nulla at tempus feugiat, ligula diam tempus velit, quis semper urna sapien eu nunc. Nullam volutpat tellus ac quam convallis, sit amet tincidunt turpis hendrerit. Donec id blandit enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer sed ipsum et diam tincidunt scelerisque. Integer gravida quam nibh, nec sollicitudin metus mollis nec. In vulputate, neque id fermentum scelerisque, nisi neque porttitor velit, id scelerisque purus libero ut nulla. Praesent fringilla convallis egestas. Sed maximus malesuada nibh sed ultrices.<\/p>",
+            "paragraph_font_family": "",
+            "paragraph_font_color": "#000000",
+            "paragraph_font_size": 24
+          }
+        }
+      },
+      "block_order": [
+        "template--17629556736315__340099fd-7cd9-4dda-a72e-fcf7ee9a6de6-1675065312d4adb823-0"
+      ],
+      "settings": {
+        "section_width": "967",
+        "content_alignment": "left"
+      }
+    },
+    "f19ec4ef-d216-47c3-93ef-8df3fedc88ce": {
+      "type": "double-column-image-with-text",
+      "blocks": {
+        "45d78993-6796-43ce-9290-c206782ebff7": {
+          "type": "spacer-block",
+          "settings": {
+            "spacer_height": 40
+          }
+        },
+        "template--17629556736315__f19ec4ef-d216-47c3-93ef-8df3fedc88ce-1675066501dd463df2-0": {
+          "type": "image",
+          "settings": {
+            "background_enable_image1": false,
+            "background_color_image1": "#ffffff",
+            "background_enabled_image1_padding": 6,
+            "first_image": "shopify:\/\/shop_images\/04-10-2022-WAX1307.jpg",
+            "add_captioin_image1": false,
+            "caption_image1": "<p>Add caption for first image<\/p>",
+            "caption_font_family_image1": "",
+            "caption_font_color_image1": "#000000",
+            "caption_font_size_image1": 15,
+            "caption_alignment_image1": "left",
+            "caption_line_height_image1": 0,
+            "switch_images": false,
+            "gap_enabled": false,
+            "gap_images_size": 50,
+            "background_enable_image2": true,
+            "background_color_image2": "#ffffff",
+            "background_enabled_image2_padding": 6,
+            "second_image": "shopify:\/\/shop_images\/04-10-2022-WAX1517.jpg",
+            "add_captioin_image2": false,
+            "caption_image2": "<p>Add caption for second image<\/p>",
+            "caption_font_family_image2": "",
+            "caption_font_color_image2": "#000000",
+            "caption_font_size_image2": 15,
+            "caption_alignment_image2": "left",
+            "caption_line_height_image2": 0
+          }
+        },
+        "5275309b-2829-477e-a175-be532871caf3": {
+          "type": "spacer-block",
+          "settings": {
+            "spacer_height": 100
+          }
+        }
+      },
+      "block_order": [
+        "45d78993-6796-43ce-9290-c206782ebff7",
+        "template--17629556736315__f19ec4ef-d216-47c3-93ef-8df3fedc88ce-1675066501dd463df2-0",
+        "5275309b-2829-477e-a175-be532871caf3"
+      ],
+      "settings": {
+        "section_width": "967",
+        "custom_section_width": 600
+      }
+    },
+    "99bd5bd1-3fb0-4b2a-aab7-e15518eca8f2": {
+      "type": "single-column-text",
+      "blocks": {
+        "template--17629556736315__99bd5bd1-3fb0-4b2a-aab7-e15518eca8f2-1675065312d4adb823-0": {
+          "type": "text",
+          "settings": {
+            "paragraph": "<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis, nulla at tempus feugiat, ligula diam tempus velit, quis semper urna sapien eu nunc. Nullam volutpat tellus ac quam convallis, sit amet tincidunt turpis hendrerit. Donec id blandit enim. Sed maximus malesuada nibh sed ultrices.”<\/p>",
+            "paragraph_font_family": "",
+            "paragraph_font_color": "#000000",
+            "paragraph_font_size": 24
+          }
+        }
+      },
+      "block_order": [
+        "template--17629556736315__99bd5bd1-3fb0-4b2a-aab7-e15518eca8f2-1675065312d4adb823-0"
+      ],
+      "settings": {
+        "section_width": "600",
+        "content_alignment": "left"
+      }
+    },
+    "df9cc594-a357-4903-a0d7-35084a8c9008": {
+      "type": "double-column-image-with-text",
+      "blocks": {
+        "7a68f678-9b30-48a3-b6a0-25dbdb0a32f5": {
+          "type": "spacer-block",
+          "settings": {
+            "spacer_height": 80
+          }
+        },
+        "template--17629556736315__df9cc594-a357-4903-a0d7-35084a8c9008-1675066501dd463df2-0": {
+          "type": "image",
+          "settings": {
+            "background_enable_image1": true,
+            "background_color_image1": "#ffffff",
+            "background_enabled_image1_padding": 6,
+            "first_image": "shopify:\/\/shop_images\/04-10-2022-WAX1307.jpg",
+            "add_captioin_image1": true,
+            "caption_image1": "<p>Model wears <a href=\"\/products\/puma-suede-classic-regal\" target=\"_blank\" title=\"PUMA | SUEDE CLASSIC REGAL\">Whiting Shirt Cosmic Papaya Check<\/a> with <a href=\"\/products\/adidas-superstar-80s\" target=\"_blank\" title=\"ADIDAS | SUPERSTAR 80S\">Dean T Shirt Black<\/a> and <a href=\"\/products\/timberland-mens-6-inch-premium-boot\" target=\"_blank\" title=\"TIMBERLAND | MENS 6 INCH PREMIUM BOOT\">Pleat Trousers Black<\/a><\/p>",
+            "caption_font_family_image1": "",
+            "caption_font_color_image1": "#000000",
+            "caption_font_size_image1": 12,
+            "caption_alignment_image1": "left",
+            "caption_line_height_image1": 0,
+            "switch_images": false,
+            "gap_enabled": false,
+            "gap_images_size": 50,
+            "background_enable_image2": false,
+            "background_color_image2": "#ffffff",
+            "background_enabled_image2_padding": 6,
+            "second_image": "shopify:\/\/shop_images\/04-10-2022-WAX1517.jpg",
+            "add_captioin_image2": true,
+            "caption_image2": "<p>Model wears <a href=\"\/products\/vans-authentic-multi-eyelets-gradient-crimson\" target=\"_blank\" title=\"VANS | AUTHENTIC | (MULTI EYELETS) | GRADIENT\/CRIMSON\">Oz Shirt Grey and Yellow Check<\/a> with <a href=\"\/products\/vans-era-59-moroccan-geo-dress-blues\" target=\"_blank\" title=\"VANS | \nERA 59 MOROCCAN | GEO\/DRESS BLUES\">Fisherman Beanie Khaki<\/a> and <a href=\"\/products\/nike-swoosh-pro-flat-peak-cap\" target=\"_blank\" title=\"NIKE | SWOOSH PRO FLAT PEAK CAP\">Pleat Trousers Black<\/a><\/p>",
+            "caption_font_family_image2": "",
+            "caption_font_color_image2": "#333333",
+            "caption_font_size_image2": 12,
+            "caption_alignment_image2": "left",
+            "caption_line_height_image2": 0
+          }
+        }
+      },
+      "block_order": [
+        "7a68f678-9b30-48a3-b6a0-25dbdb0a32f5",
+        "template--17629556736315__df9cc594-a357-4903-a0d7-35084a8c9008-1675066501dd463df2-0"
+      ],
+      "settings": {
+        "section_width": "967",
+        "custom_section_width": 600
+      }
+    }
+  },
+  "order": [
+    "main",
+    "8dffdb6c-3382-411e-8c3f-ee0959cafacb",
+    "83ce739c-897d-4027-98a6-986897d5785a",
+    "824cc8d2-bbde-4abc-84a0-82053720f554",
+    "a4490867-64ea-4550-b333-fe235f0258ba",
+    "dd8895e2-eb4d-4e0e-9c6d-c8598a8fea9c",
+    "9f4ae1bf-628d-4e69-a4b3-6b3116be98f0",
+    "3224af96-56a4-4e8d-afda-38c3d3f39786",
+    "340099fd-7cd9-4dda-a72e-fcf7ee9a6de6",
+    "f19ec4ef-d216-47c3-93ef-8df3fedc88ce",
+    "99bd5bd1-3fb0-4b2a-aab7-e15518eca8f2",
+    "df9cc594-a357-4903-a0d7-35084a8c9008"
+  ]
+}
