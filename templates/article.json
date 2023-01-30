@@ -306,11 +306,11 @@
             "background_color_image2": "#FFFFFF",
             "background_enabled_image2_padding": 6,
             "second_image": "shopify:\/\/shop_images\/04-10-2022-WAX1517.jpg",
-            "add_captioin_image2": false,
-            "caption_image2": "<p>Add caption for second image<\/p>",
+            "add_captioin_image2": true,
+            "caption_image2": "<p>Model wears <a href=\"\/products\/adidas-superstar-80s\" target=\"_blank\" title=\"ADIDAS | SUPERSTAR 80S\">Oz Shirt Grey<\/a> and <a href=\"\/products\/flex-fit-mini-ottoman-black\" target=\"_blank\" title=\"FLEX FIT | MINI OTTOMAN BLACK\">Yellow Check<\/a> with <a href=\"\/products\/puma-suede-classic-regal\" target=\"_blank\" title=\"PUMA | SUEDE CLASSIC REGAL\">Fisherman Beanie Khaki <\/a>and <a href=\"\/products\/vans-apparel-and-accessories-classic-super-no-show-socks-3-pack-white\" target=\"_blank\" title=\"VANS APPAREL AND ACCESSORIES | CLASSIC SUPER NO SHOW SOCKS 3 PACK WHITE\">Pleat Trousers Black<\/a><\/p>",
             "caption_font_family_image2": "Helvetica, Arial, sans-serif",
             "caption_font_color_image2": "#000000",
-            "caption_font_size_image2": 15,
+            "caption_font_size_image2": 12,
             "caption_alignment_image2": "left",
             "caption_line_height_image2": 0
           }
