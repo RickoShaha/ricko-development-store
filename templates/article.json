@@ -318,7 +318,35 @@
         "eb171ab0-d222-41b4-aa05-8ed467957505": {
           "type": "spacer-block",
           "settings": {
-            "spacer_height": 20
+            "spacer_height": 40
+          }
+        },
+        "c5c59aff-96e9-4c18-bb35-6efe1a5bb9a6": {
+          "type": "image",
+          "settings": {
+            "background_enable_image1": false,
+            "background_color_image1": "#FFFFFF",
+            "background_enabled_image1_padding": 6,
+            "add_captioin_image1": false,
+            "caption_image1": "<p>Add caption for first image<\/p>",
+            "caption_font_family_image1": "Helvetica, Arial, sans-serif",
+            "caption_font_color_image1": "#000000",
+            "caption_font_size_image1": 15,
+            "caption_alignment_image1": "left",
+            "caption_line_height_image1": 0,
+            "switch_images": false,
+            "gap_enabled": false,
+            "gap_images_size": 50,
+            "background_enable_image2": false,
+            "background_color_image2": "#FFFFFF",
+            "background_enabled_image2_padding": 6,
+            "add_captioin_image2": false,
+            "caption_image2": "<p>Add caption for second image<\/p>",
+            "caption_font_family_image2": "Helvetica, Arial, sans-serif",
+            "caption_font_color_image2": "#000000",
+            "caption_font_size_image2": 15,
+            "caption_alignment_image2": "left",
+            "caption_line_height_image2": 0
           }
         }
       },
@@ -328,7 +356,8 @@
         "f0f75446-0abf-4f1e-b617-372704fd52ad",
         "bf849ac3-7348-4c03-8d3d-54e7671fac16",
         "5ef5596b-267c-4783-846d-2b59c4713c3d",
-        "eb171ab0-d222-41b4-aa05-8ed467957505"
+        "eb171ab0-d222-41b4-aa05-8ed467957505",
+        "c5c59aff-96e9-4c18-bb35-6efe1a5bb9a6"
       ],
       "settings": {
         "section_width": "600",
