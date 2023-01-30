@@ -45,7 +45,7 @@
           "settings": {
             "paragraph": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu euismod ante, quis finibus odio. Aenean scelerisque consectetur pharetra. In condimentum est eu eros malesuada aliquam.<\/p>",
             "paragraph_font_family": "",
-            "paragraph_font_color": "#000000",
+            "paragraph_font_color": "#333333",
             "paragraph_font_size": 24
           }
         },
@@ -54,23 +54,56 @@
           "settings": {
             "paragraph": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu euismod ante, quis finibus odio. Aenean scelerisque consectetur pharetra. In condimentum est eu eros malesuada aliquam. Aenean iaculis ligula a quam vehicula mattis. Nulla fringilla bibendum erat id molestie. Quisque id arcu in libero euismod rutrum sed ut libero. Nunc et dolor non ex elementum varius vel ut ligula. Sed id felis ex. Aenean tristique lobortis est, vitae consequat turpis sagittis varius. Quisque pharetra, dui ornare iaculis consectetur, magna velit condimentum nulla, non tristique nisl lorem ac risus. Cras accumsan eu est in dignissim. Aenean ligula felis, rutrum in augue quis, consectetur porta libero.<\/p><p>Nunc faucibus ornare risus nec accumsan. Donec sed nisi rutrum, mattis diam a, tempus risus. Morbi at lectus elementum, laoreet orci sit amet, rutrum ipsum. Integer vel aliquet risus, sed pharetra justo. Pellentesque commodo eu quam vel hendrerit. Mauris non turpis fermentum, faucibus nulla quis, convallis nulla. Ut efficitur metus eros, quis consequat nunc tincidunt et. Sed eleifend arcu vel porta cursus. Mauris ultrices mauris vel lacus hendrerit sodales. Quisque a mattis turpis. Sed nisl purus, malesuada.<\/p>",
             "paragraph_font_family": "Helvetica, Arial, sans-serif",
-            "paragraph_font_color": "#000000",
+            "paragraph_font_color": "#333333",
             "paragraph_font_size": 15
+          }
+        },
+        "3e31dae6-ff32-4c8b-aeee-6dc021cc71de": {
+          "type": "spacer-block",
+          "settings": {
+            "spacer_height": 80
           }
         }
       },
       "block_order": [
         "template--17629556736315__8dffdb6c-3382-411e-8c3f-ee0959cafacb-1675065312d4adb823-0",
-        "cae80e5f-6c6b-4a81-b625-091bb2d117e5"
+        "cae80e5f-6c6b-4a81-b625-091bb2d117e5",
+        "3e31dae6-ff32-4c8b-aeee-6dc021cc71de"
       ],
       "settings": {
         "section_width": "600",
+        "content_alignment": "left"
+      }
+    },
+    "83ce739c-897d-4027-98a6-986897d5785a": {
+      "type": "double-column-text",
+      "blocks": {
+        "template--17629556736315__83ce739c-897d-4027-98a6-986897d5785a-16750654750023d120-0": {
+          "type": "double-text",
+          "settings": {
+            "first_column_text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu euismod ante, quis finibus odio. Aenean scelerisque consectetur pharetra. In condimentum est eu eros malesuada aliquam. Aenean iaculis ligula a quam vehicula mattis. Nulla fringilla bibendum erat id molestie. Quisque id arcu in libero euismod rutrum sed ut libero. Nunc et dolor non ex elementum varius vel ut ligula. Sed id felis ex. Aenean tristique lobortis est, vitae consequat turpis sagittis varius. Quisque pharetra, dui ornare iaculis consectetur, magna velit condimentum nulla, non tristique nisl lorem ac risus. Cras accumsan eu est in dignissim.<\/p>",
+            "first_font_family": "",
+            "first_column_font_color": "#333333",
+            "first_column_font_size": 15,
+            "second_column_text": "<p>Aenean ligula felis, rutrum in augue quis, consectetur porta libero. Sed eleifend arcu vel porta cursus. Nunc faucibus ornare risus nec accumsan. Donec sed nisi rutrum, mattis diam a, tempus risus. Morbi at lectus elementum, laoreet orci sit amet, rutrum ipsum. Integer vel aliquet risus, sed pharetra justo. Pellentesque commodo eu quam vel hendrerit. Mauris non turpis fermentum, faucibus nulla quis, convallis nulla. Ut efficitur metus eros, quis consequat nunc tincidunt et. Quisque a mattis turpis. Sed nisl purus, malesuada.<\/p>",
+            "second_font_family": "",
+            "second_column_font_color": "#333333",
+            "second_column_font_size": 15
+          }
+        }
+      },
+      "block_order": [
+        "template--17629556736315__83ce739c-897d-4027-98a6-986897d5785a-16750654750023d120-0"
+      ],
+      "settings": {
+        "section_width": "967",
         "content_alignment": "left"
       }
     }
   },
   "order": [
     "main",
-    "8dffdb6c-3382-411e-8c3f-ee0959cafacb"
+    "8dffdb6c-3382-411e-8c3f-ee0959cafacb",
+    "83ce739c-897d-4027-98a6-986897d5785a"
   ]
 }
