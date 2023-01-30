@@ -1,1 +1,76 @@
-{"sections":{"main":{"type":"main-article","blocks":{"featured_image":{"type":"featured_image","settings":{"image_height":"adapt"}},"title":{"type":"title","settings":{"blog_show_date":true,"blog_show_author":false}},"share":{"type":"share","settings":{"share_label":"Share"}},"content":{"type":"content","settings":{}}},"block_order":["featured_image","title","share","content"],"settings":{}}},"order":["main"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "featured_image": {
+          "type": "featured_image",
+          "settings": {
+            "image_height": "adapt"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "blog_show_date": true,
+            "blog_show_author": false
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "featured_image",
+        "title",
+        "share",
+        "content"
+      ],
+      "settings": {
+      }
+    },
+    "8dffdb6c-3382-411e-8c3f-ee0959cafacb": {
+      "type": "single-column-text",
+      "blocks": {
+        "template--17629556736315__8dffdb6c-3382-411e-8c3f-ee0959cafacb-1675065312d4adb823-0": {
+          "type": "text",
+          "settings": {
+            "paragraph": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu euismod ante, quis finibus odio. Aenean scelerisque consectetur pharetra. In condimentum est eu eros malesuada aliquam.<\/p>",
+            "paragraph_font_family": "",
+            "paragraph_font_color": "#000000",
+            "paragraph_font_size": 24
+          }
+        },
+        "cae80e5f-6c6b-4a81-b625-091bb2d117e5": {
+          "type": "text",
+          "settings": {
+            "paragraph": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu euismod ante, quis finibus odio. Aenean scelerisque consectetur pharetra. In condimentum est eu eros malesuada aliquam. Aenean iaculis ligula a quam vehicula mattis. Nulla fringilla bibendum erat id molestie. Quisque id arcu in libero euismod rutrum sed ut libero. Nunc et dolor non ex elementum varius vel ut ligula. Sed id felis ex. Aenean tristique lobortis est, vitae consequat turpis sagittis varius. Quisque pharetra, dui ornare iaculis consectetur, magna velit condimentum nulla, non tristique nisl lorem ac risus. Cras accumsan eu est in dignissim. Aenean ligula felis, rutrum in augue quis, consectetur porta libero.<\/p><p>Nunc faucibus ornare risus nec accumsan. Donec sed nisi rutrum, mattis diam a, tempus risus. Morbi at lectus elementum, laoreet orci sit amet, rutrum ipsum. Integer vel aliquet risus, sed pharetra justo. Pellentesque commodo eu quam vel hendrerit. Mauris non turpis fermentum, faucibus nulla quis, convallis nulla. Ut efficitur metus eros, quis consequat nunc tincidunt et. Sed eleifend arcu vel porta cursus. Mauris ultrices mauris vel lacus hendrerit sodales. Quisque a mattis turpis. Sed nisl purus, malesuada.<\/p>",
+            "paragraph_font_family": "Helvetica, Arial, sans-serif",
+            "paragraph_font_color": "#000000",
+            "paragraph_font_size": 15
+          }
+        }
+      },
+      "block_order": [
+        "template--17629556736315__8dffdb6c-3382-411e-8c3f-ee0959cafacb-1675065312d4adb823-0",
+        "cae80e5f-6c6b-4a81-b625-091bb2d117e5"
+      ],
+      "settings": {
+        "section_width": "600",
+        "content_alignment": "left"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "8dffdb6c-3382-411e-8c3f-ee0959cafacb"
+  ]
+}
