@@ -512,11 +512,18 @@
             "caption_alignment_image2": "left",
             "caption_line_height_image2": 0
           }
+        },
+        "5275309b-2829-477e-a175-be532871caf3": {
+          "type": "spacer-block",
+          "settings": {
+            "spacer_height": 100
+          }
         }
       },
       "block_order": [
         "45d78993-6796-43ce-9290-c206782ebff7",
-        "template--17629556736315__f19ec4ef-d216-47c3-93ef-8df3fedc88ce-1675066501dd463df2-0"
+        "template--17629556736315__f19ec4ef-d216-47c3-93ef-8df3fedc88ce-1675066501dd463df2-0",
+        "5275309b-2829-477e-a175-be532871caf3"
       ],
       "settings": {
         "section_width": "967",
