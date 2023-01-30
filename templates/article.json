@@ -170,6 +170,38 @@
         "section_width": "967",
         "custom_section_width": 600
       }
+    },
+    "dd8895e2-eb4d-4e0e-9c6d-c8598a8fea9c": {
+      "type": "single-column-image-with-text",
+      "blocks": {
+        "template--17629556736315__dd8895e2-eb4d-4e0e-9c6d-c8598a8fea9c-1675065813c9adb45f-0": {
+          "type": "image",
+          "settings": {
+            "image_with_text_image": "shopify:\/\/shop_images\/04-10-2022-WAX1465-Square.jpg",
+            "add_captioin": true,
+            "caption": "<p>Model wears <a href=\"\/products\/adidas-kids-stan-smith\" target=\"_blank\" title=\"ADIDAS | KID'S STAN SMITH\">Whiting Shirt Cosmic Papaya Check<\/a> with <a href=\"\/products\/converse-chuck-taylor-all-star-ii-hi\" target=\"_blank\" title=\"CONVERSE | CHUCK TAYLOR ALL STAR II HI\">Dean T Shirt Black<\/a> and <a href=\"\/products\/vans-authentic-butterfly-true-white-black\" target=\"_blank\" title=\"VANS | AUTHENTIC (BUTTERFLY) TRUE | WHITE \/ BLACK\">Pleat Trousers Black<\/a><\/p>",
+            "caption_font_family": "",
+            "caption_font_color": "#000000",
+            "caption_font_size": 12,
+            "caption_alignment": "center",
+            "caption_line_height": 10
+          }
+        },
+        "8c3fae0e-a51e-4a5d-b623-c91667eb9ed8": {
+          "type": "spacer-block",
+          "settings": {
+            "spacer_height": 40
+          }
+        }
+      },
+      "block_order": [
+        "template--17629556736315__dd8895e2-eb4d-4e0e-9c6d-c8598a8fea9c-1675065813c9adb45f-0",
+        "8c3fae0e-a51e-4a5d-b623-c91667eb9ed8"
+      ],
+      "settings": {
+        "section_width": "1200",
+        "custom_section_width": 600
+      }
     }
   },
   "order": [
@@ -177,6 +209,7 @@
     "8dffdb6c-3382-411e-8c3f-ee0959cafacb",
     "83ce739c-897d-4027-98a6-986897d5785a",
     "824cc8d2-bbde-4abc-84a0-82053720f554",
-    "a4490867-64ea-4550-b333-fe235f0258ba"
+    "a4490867-64ea-4550-b333-fe235f0258ba",
+    "dd8895e2-eb4d-4e0e-9c6d-c8598a8fea9c"
   ]
 }
