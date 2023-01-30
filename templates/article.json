@@ -529,6 +529,74 @@
         "section_width": "967",
         "custom_section_width": 600
       }
+    },
+    "99bd5bd1-3fb0-4b2a-aab7-e15518eca8f2": {
+      "type": "single-column-text",
+      "blocks": {
+        "template--17629556736315__99bd5bd1-3fb0-4b2a-aab7-e15518eca8f2-1675065312d4adb823-0": {
+          "type": "text",
+          "settings": {
+            "paragraph": "<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis, nulla at tempus feugiat, ligula diam tempus velit, quis semper urna sapien eu nunc. Nullam volutpat tellus ac quam convallis, sit amet tincidunt turpis hendrerit. Donec id blandit enim. Sed maximus malesuada nibh sed ultrices.”<\/p>",
+            "paragraph_font_family": "",
+            "paragraph_font_color": "#000000",
+            "paragraph_font_size": 24
+          }
+        }
+      },
+      "block_order": [
+        "template--17629556736315__99bd5bd1-3fb0-4b2a-aab7-e15518eca8f2-1675065312d4adb823-0"
+      ],
+      "settings": {
+        "section_width": "600",
+        "content_alignment": "left"
+      }
+    },
+    "df9cc594-a357-4903-a0d7-35084a8c9008": {
+      "type": "double-column-image-with-text",
+      "blocks": {
+        "7a68f678-9b30-48a3-b6a0-25dbdb0a32f5": {
+          "type": "spacer-block",
+          "settings": {
+            "spacer_height": 80
+          }
+        },
+        "template--17629556736315__df9cc594-a357-4903-a0d7-35084a8c9008-1675066501dd463df2-0": {
+          "type": "image",
+          "settings": {
+            "background_enable_image1": false,
+            "background_color_image1": "#FFFFFF",
+            "background_enabled_image1_padding": 6,
+            "add_captioin_image1": false,
+            "caption_image1": "<p>Add caption for first image<\/p>",
+            "caption_font_family_image1": "",
+            "caption_font_color_image1": "#000000",
+            "caption_font_size_image1": 15,
+            "caption_alignment_image1": "left",
+            "caption_line_height_image1": 0,
+            "switch_images": false,
+            "gap_enabled": false,
+            "gap_images_size": 50,
+            "background_enable_image2": false,
+            "background_color_image2": "#FFFFFF",
+            "background_enabled_image2_padding": 6,
+            "add_captioin_image2": false,
+            "caption_image2": "<p>Add caption for second image<\/p>",
+            "caption_font_family_image2": "",
+            "caption_font_color_image2": "#000000",
+            "caption_font_size_image2": 15,
+            "caption_alignment_image2": "left",
+            "caption_line_height_image2": 0
+          }
+        }
+      },
+      "block_order": [
+        "7a68f678-9b30-48a3-b6a0-25dbdb0a32f5",
+        "template--17629556736315__df9cc594-a357-4903-a0d7-35084a8c9008-1675066501dd463df2-0"
+      ],
+      "settings": {
+        "section_width": "967",
+        "custom_section_width": 600
+      }
     }
   },
   "order": [
@@ -541,6 +609,8 @@
     "9f4ae1bf-628d-4e69-a4b3-6b3116be98f0",
     "3224af96-56a4-4e8d-afda-38c3d3f39786",
     "340099fd-7cd9-4dda-a72e-fcf7ee9a6de6",
-    "f19ec4ef-d216-47c3-93ef-8df3fedc88ce"
+    "f19ec4ef-d216-47c3-93ef-8df3fedc88ce",
+    "99bd5bd1-3fb0-4b2a-aab7-e15518eca8f2",
+    "df9cc594-a357-4903-a0d7-35084a8c9008"
   ]
 }
