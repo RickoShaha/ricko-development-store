@@ -252,9 +252,6 @@
 
                             .caption-wrapper-{{block.id}} .second-caption-wrapper-{{block.id}}.caption2{
                                 width: 50%;
-                              font-size: {{block.settings.caption_font_size_image2}}px;
-                                    font-family: {{block.settings.caption_font_family_image2}};
-                                    color: {{block.settings.caption_font_color_image2}};
                             }
 
                             {%- if block.settings.add_captioin_image1 == true -%}
@@ -275,7 +272,9 @@
                             {%- if block.settings.add_captioin_image2 == true -%}
                                 .caption-wrapper-{{block.id}} .sceond-caption-wrapper-{{block.id}}.caption2{
                                     {% comment %} width: 50%; {% endcomment %}
-                                    
+                                    font-size: {{block.settings.caption_font_size_image2}}px;
+                                    font-family: {{block.settings.caption_font_family_image2}};
+                                    color: {{block.settings.caption_font_color_image2}};
                                     
                                 }
                                 
