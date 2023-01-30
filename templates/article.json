@@ -613,6 +613,7 @@
         "template--17629556736315__61c78986-6615-4561-b395-ae82ec369293-1675093919675957d2-0": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/04-10-2022-WAX1517.jpg",
             "text": "<p>Edit text here<\/p>",
             "text_font": "",
             "text_font_color": "#000000",
@@ -620,7 +621,7 @@
             "text_alignment": "left",
             "text_line_height": 0,
             "background_enable_text": false,
-            "background_color_text": "#FFFFFF",
+            "background_color_text": "#ffffff",
             "background_enabled_text_padding": 6
           }
         }
