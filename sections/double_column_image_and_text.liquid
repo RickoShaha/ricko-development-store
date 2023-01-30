@@ -1,0 +1,144 @@
+{% schema %}
+    {
+        "name": "Double Column Image Text",
+        "class": "double-column-image-and-text",
+        "settings": [
+            {
+                "type": "select",
+                "id": "section_width",
+                "label": "Section Width",
+                "options": [
+                    {
+                        "value": "600",
+                        "label": "Small"
+                    },
+                    {
+                        "value": "967",
+                        "label": "Medium"
+                    },
+                    {
+                        "value": "1200",
+                        "label": "Large"
+                    },
+                    {
+                        "value": "custom",
+                        "label": "Custom"
+                    }
+                ],
+                "default": "967"
+            },
+            {
+                "type": "range",
+                "id": "custom_section_width",
+                "label": "Custom Section Width",
+                "min": 200,
+                "max": 1200,
+                "step": 10,
+                "unit": "px",
+                "default": 600
+            }
+        ],
+        "blocks": [
+            {
+                "type" : "image",
+                "name" : "Image With Text",
+                "settings" : [
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Select Image"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "Text",
+                        "default": "<p>Edit text here</p>"
+                    },
+                    {
+                        "type": "font",
+                        "id": "text_font",
+                        "label": "Text Font Family"
+                    },
+                    {
+                        "type": "color",
+                        "id": "text_font_color",
+                        "label": "Text Color",
+                        "default": "#000000"
+                    },
+                    {
+                        "type": "range",
+                        "id": "text_font_size",
+                        "min": 10,
+                        "max": 50,
+                        "step": 1,
+                        "unit": "px",
+                        "label": "Text Font Size",
+                        "default": 15
+                    },
+                    {
+                        "type": "select",
+                        "id": "text_alignment",
+                        "label": "Text Alignment",
+                        "options": [
+                            {
+                                "value": "left",
+                                "label": "Left"
+                            },
+                            {
+                                "value": "center",
+                                "label": "Center"
+                            },
+                            {
+                                "value": "right",
+                                "label": "Right"
+                            }
+                        ],
+                        "default": "left"
+                    },
+                    {
+                        "type": "range",
+                        "id": "text_line_height",
+                        "min": 0,
+                        "max": 200,
+                        "step": 2,
+                        "unit": "px",
+                        "label": "First Caption Line Height",
+                        "default": 0
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "background_enable_text",
+                        "label": "Add Background Color to Text",
+                        "default": false
+                    },
+                    {
+                        "type": "color",
+                        "id": "background_color_text",
+                        "label": "Text Background Color",
+                        "default": "#FFFFFF"
+                    },
+                    {
+                        "type": "range",
+                        "id": "background_enabled_text_padding",
+                        "min": 0,
+                        "max": 15,
+                        "step": 1,
+                        "unit": "%",
+                        "label": "Text Padding(Applicable if background color is selected)",
+                        "default": 6
+                    }
+                ]
+            }
+        ],
+        "presets" : [
+            {
+                "name": "Double Column Image Text",
+                "blocks":[
+                    {
+                        "type": "image"
+                    }
+                ]
+            }
+        ]
+    }
+{% endschema %}
