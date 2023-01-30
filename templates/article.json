@@ -452,6 +452,27 @@
         "section_width": "967",
         "custom_section_width": 600
       }
+    },
+    "340099fd-7cd9-4dda-a72e-fcf7ee9a6de6": {
+      "type": "single-column-text",
+      "blocks": {
+        "template--17629556736315__340099fd-7cd9-4dda-a72e-fcf7ee9a6de6-1675065312d4adb823-0": {
+          "type": "text",
+          "settings": {
+            "paragraph": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis, nulla at tempus feugiat, ligula diam tempus velit, quis semper urna sapien eu nunc. Nullam volutpat tellus ac quam convallis, sit amet tincidunt turpis hendrerit. Donec id blandit enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer sed ipsum et diam tincidunt scelerisque. Integer gravida quam nibh, nec sollicitudin metus mollis nec. In vulputate, neque id fermentum scelerisque, nisi neque porttitor velit, id scelerisque purus libero ut nulla. Praesent fringilla convallis egestas. Sed maximus malesuada nibh sed ultrices.<\/p>",
+            "paragraph_font_family": "",
+            "paragraph_font_color": "#000000",
+            "paragraph_font_size": 24
+          }
+        }
+      },
+      "block_order": [
+        "template--17629556736315__340099fd-7cd9-4dda-a72e-fcf7ee9a6de6-1675065312d4adb823-0"
+      ],
+      "settings": {
+        "section_width": "967",
+        "content_alignment": "left"
+      }
     }
   },
   "order": [
@@ -462,6 +483,7 @@
     "a4490867-64ea-4550-b333-fe235f0258ba",
     "dd8895e2-eb4d-4e0e-9c6d-c8598a8fea9c",
     "9f4ae1bf-628d-4e69-a4b3-6b3116be98f0",
-    "3224af96-56a4-4e8d-afda-38c3d3f39786"
+    "3224af96-56a4-4e8d-afda-38c3d3f39786",
+    "340099fd-7cd9-4dda-a72e-fcf7ee9a6de6"
   ]
 }
