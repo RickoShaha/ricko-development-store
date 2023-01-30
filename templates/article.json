@@ -345,8 +345,8 @@
             "add_captioin_image2": false,
             "caption_image2": "<p>Add caption for second image<\/p>",
             "caption_font_family_image2": "Helvetica, Arial, sans-serif",
-            "caption_font_color_image2": "#000000",
-            "caption_font_size_image2": 15,
+            "caption_font_color_image2": "#591212",
+            "caption_font_size_image2": 12,
             "caption_alignment_image2": "left",
             "caption_line_height_image2": 0
           }
