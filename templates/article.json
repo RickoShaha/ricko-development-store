@@ -122,10 +122,17 @@
             "caption_alignment": "left",
             "caption_line_height": 20
           }
+        },
+        "05644244-bcd4-44ae-9ca5-3962393c4574": {
+          "type": "spacer-block",
+          "settings": {
+            "spacer_height": 40
+          }
         }
       },
       "block_order": [
-        "template--17629556736315__824cc8d2-bbde-4abc-84a0-82053720f554-1675065813c9adb45f-0"
+        "template--17629556736315__824cc8d2-bbde-4abc-84a0-82053720f554-1675065813c9adb45f-0",
+        "05644244-bcd4-44ae-9ca5-3962393c4574"
       ],
       "settings": {
         "section_width": "600",
