@@ -90,10 +90,17 @@
             "second_column_font_color": "#333333",
             "second_column_font_size": 15
           }
+        },
+        "8a001745-360e-4c5f-aaa0-d2ba2e32436b": {
+          "type": "spacer-block",
+          "settings": {
+            "spacer_height": 80
+          }
         }
       },
       "block_order": [
-        "template--17629556736315__83ce739c-897d-4027-98a6-986897d5785a-16750654750023d120-0"
+        "template--17629556736315__83ce739c-897d-4027-98a6-986897d5785a-16750654750023d120-0",
+        "8a001745-360e-4c5f-aaa0-d2ba2e32436b"
       ],
       "settings": {
         "section_width": "967",
