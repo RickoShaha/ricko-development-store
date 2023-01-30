@@ -405,10 +405,17 @@
             "caption_alignment_image2": "left",
             "caption_line_height_image2": 0
           }
+        },
+        "737de971-3415-4330-b224-7340fbbdbe60": {
+          "type": "spacer-block",
+          "settings": {
+            "spacer_height": 60
+          }
         }
       },
       "block_order": [
-        "template--17629556736315__3224af96-56a4-4e8d-afda-38c3d3f39786-1675066501dd463df2-0"
+        "template--17629556736315__3224af96-56a4-4e8d-afda-38c3d3f39786-1675066501dd463df2-0",
+        "737de971-3415-4330-b224-7340fbbdbe60"
       ],
       "settings": {
         "section_width": "967",
