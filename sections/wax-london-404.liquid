@@ -5,7 +5,7 @@
           <h1 class="header-wrapper-{{block.id}} error-message-404-header">{{block.settings.header_text_alignment}}</h1>
         {%-when 'image'%}
           <div class="image-wrapper-{{block.id}} error-message-image">
-            <img src="{{block.settings.image | img_url: "grande"}}">
+            <img src="{{block.settings.image | img_url: 'grande'}}">
           </div>
         {%-when 'text2'%}
           <div class="error-message-paragraph">

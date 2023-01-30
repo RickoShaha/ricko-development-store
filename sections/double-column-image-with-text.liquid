@@ -239,7 +239,7 @@
                             }
                         {%- endif -%}
 
-                        {%- if block.settings.add_captioin_image1 == false and block.settings.add_captioin_image2 == false -%}
+                        {%- if block.settings.add_caption_image1 == false and block.settings.add_caption_image2 == false -%}
                             .caption-wrapper-{{block.id}}{
                                 display: none;
                             }
@@ -252,9 +252,12 @@
 
                             .caption-wrapper-{{block.id}} .second-caption-wrapper-{{block.id}}.caption2{
                                 width: 50%;
+                                font-size: {{block.settings.caption_font_size_image2}}px;
+                                font-family: {{block.settings.caption_font_family_image2}};
+                                color: {{block.settings.caption_font_color_image2}}; 
                             }
 
-                            {%- if block.settings.add_captioin_image1 == true -%}
+                            {%- if block.settings.add_caption_image1 == true -%}
                                 .caption-wrapper-{{block.id}} .first-caption-wrapper-{{block.id}}.caption1{
                                     {% comment %} width: 50%; {% endcomment %}
                                     font-size: {{block.settings.caption_font_size_image1}}px;
@@ -269,12 +272,12 @@
                                     visibility: hidden; 
                                 }
                             {%- endif -%}
-                            {%- if block.settings.add_captioin_image2 == true -%}
-                                .caption-wrapper-{{block.id}} .sceond-caption-wrapper-{{block.id}}.caption2{
+                            {%- if block.settings.add_caption_image2 == true -%}
+                                .caption-wrapper-{{block.id}} .second-caption-wrapper-{{block.id}}.caption2{
                                     {% comment %} width: 50%; {% endcomment %}
-                                    font-size: {{block.settings.caption_font_size_image2}}px;
+                                    {% comment %} font-size: {{block.settings.caption_font_size_image2}}px;
                                     font-family: {{block.settings.caption_font_family_image2}};
-                                    color: {{block.settings.caption_font_color_image2}};
+                                    color: {{block.settings.caption_font_color_image2}};  {% endcomment %}
                                     
                                 }
                                 
@@ -302,7 +305,7 @@
 
 {% schema %}
     {
-        "name": "Double Column Imnage",
+        "name": "Double Column Image",
         "class": "double-column-image",
         "settings": [
             {
@@ -374,7 +377,7 @@
                     },
                     {
                         "type": "checkbox",
-                        "id": "add_captioin_image1",
+                        "id": "add_caption_image1",
                         "label": "Add Caption for First Image",
                         "default": false
                     },
@@ -493,7 +496,7 @@
                     },
                     {
                         "type": "checkbox",
-                        "id": "add_captioin_image2",
+                        "id": "add_caption_image2",
                         "label": "Add Caption for Second Image",
                         "default": false
                     },
