@@ -606,6 +606,33 @@
         "section_width": "967",
         "custom_section_width": 600
       }
+    },
+    "61c78986-6615-4561-b395-ae82ec369293": {
+      "type": "double_column_image_and_text",
+      "blocks": {
+        "template--17629556736315__61c78986-6615-4561-b395-ae82ec369293-1675093919675957d2-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/04-10-2022-WAX1517.jpg",
+            "text": "<p>Edit text here<\/p>",
+            "text_font": "",
+            "text_font_color": "#000000",
+            "text_font_size": 15,
+            "text_alignment": "left",
+            "text_line_height": 0,
+            "background_enable_text": false,
+            "background_color_text": "#ffffff",
+            "background_enabled_text_padding": 6
+          }
+        }
+      },
+      "block_order": [
+        "template--17629556736315__61c78986-6615-4561-b395-ae82ec369293-1675093919675957d2-0"
+      ],
+      "settings": {
+        "section_width": "967",
+        "custom_section_width": 600
+      }
     }
   },
   "order": [
@@ -620,6 +647,7 @@
     "340099fd-7cd9-4dda-a72e-fcf7ee9a6de6",
     "f19ec4ef-d216-47c3-93ef-8df3fedc88ce",
     "99bd5bd1-3fb0-4b2a-aab7-e15518eca8f2",
-    "df9cc594-a357-4903-a0d7-35084a8c9008"
+    "df9cc594-a357-4903-a0d7-35084a8c9008",
+    "61c78986-6615-4561-b395-ae82ec369293"
   ]
 }
