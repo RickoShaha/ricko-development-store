@@ -7,6 +7,13 @@
                         <img src="{{block.settings.image | img_url: 'master'}}">
                     </div>
                     <div class="background-wrapper--{{block.id}}">
+                        {%- if block.settings.include_header == true -%}
+                            <div class="header-wrapper-{{block.id}}">
+                                <{{block.settings.header_size}}>
+                                    {{block.settings.header}}
+                                </{{block.settings.header_size}}>
+                            </div>
+                        {%- endif -%}
                         <div class="text-wrapper-{{block.id}}">
                             {{block.settings.text}}
                         </div>
@@ -21,7 +28,7 @@
 </section>
 
 <style>
-    {% if section.settings.width == "custom" %}
+    {% if section.settings.section_width == "custom" %}
         .section-wrapper-{{section.id}}{
             width: {{section.settings.custom_section_width}}px;
             margin: 0 auto;
@@ -39,25 +46,64 @@
     {%- for block in section.blocks -%}
         {% case block.type %}
             {%- when 'image' -%}
-                {%- if section.settings.width == "custom" -%}
+                {%- if section.settings.section_width == "custom" -%}
                     .section-wrapper-{{section.id}} .image-text-wrapper-{{block.id}}{
-                        height: {{section.settings.custom_section_width | times: 0.625 }}px;
+                        height: {{section.settings.custom_section_width | times: 1.25 | times: 0.01 | times: block.settings.image_size}}px;
                         width: 100%;
                         display: flex;
                         justify-content: space-between;
-                        align-items: center;
+                        column-gap: {{block.settings.gap}}px;           
                     }
                     {%- else -%}
                     .section-wrapper-{{section.id}} .image-text-wrapper-{{block.id}}{
-                        height: {{section.settings.section_width | times: 0.625 }}px;
+                        height: {{section.settings.section_width | times: 1.25 | times: 0.01 | times: block.settings.image_size }}px;
                         width: 100%;
                         display: flex;
                         justify-content: space-between;
-                        align-items: center;
+                        column-gap: {{block.settings.gap}}px;
                     }
                 {%- endif -%}
+                {%- if block.settings.switch_blocks == true -%}
+                    .section-wrapper-{{section.id}} .image-text-wrapper-{{block.id}}{
+                        flex-direction: row-reverse;    
+                    }
+                {%- endif -%}
+                    .image-wrapper-{{block.id}}{
+                        width: {{block.settings.image_size}}%;
+                    }
+                    .image-wrapper-{{block.id}} img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                    .background-wrapper--{{block.id}}{
+                        width: {{100 | minus: block.settings.image_size}}%;
+                        padding: {{block.settings.background_text_padding}}%;
+                    }
+                    {%- if block.settings.background_enable_text == true -%}
+                        .background-wrapper--{{block.id}}{
+                            background: {{block.settings.background_color_text}};
+                        }
+                    {%- endif -%}
+                    .text-wrapper-{{block.id}}{
+                        width: 100%;
+                        font-size: {{block.settings.text_font_size}}px;
+                        font-family: {{block.settings.text_font_family}};
+                        color: {{block.settings.text_font_color}};
+                    }
+                    .text-wrapper-{{block.id}} p{
+                        text-align: {{block.settings.text_alignment}};
+                        margin: 0;
+                        line-height: {{block.settings.text_line_height}}px;
+                    }
+                    .header-wrapper-{{block.id}} {{block.settings.header_size}}{
+                        font-family: {{block.settings.header_font_family}};
+                        color: {{block.settings.header_font_color}};
+                    }
             {%- when 'spacer-block' -%}
-                
+                .section-wrapper-{{section.id}} .spacer-wrapper-{{block.id}}{
+                    height: {{block.settings.spacer_height}}px;
+                }
         {% endcase %}
     {%- endfor -%}
 </style>
@@ -113,6 +159,81 @@
                         "label": "Select Image"
                     },
                     {
+                        "type": "range",
+                        "id": "image_size",
+                        "min": 25,
+                        "max": 75,
+                        "step": 1,
+                        "unit": "%",
+                        "label": "Image Size",
+                        "default": 50
+                    },
+                    {
+                        "type": "range",
+                        "id": "gap",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1,
+                        "unit": "px",
+                        "label": "Gap Size",
+                        "default": 0
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "include_header",
+                        "label": "Include Header",
+                        "default": false
+                    },                                          
+                    {
+                        "type": "text",
+                        "id": "header",
+                        "label": "Header (Applicable only if Include Header is selected)",
+                        "default": "Include a header here"
+                    },
+                    {
+                        "type": "select",
+                        "id": "header_size",
+                        "label": "Header Size (Applicable only if Include Header is checked)",
+                        "options": [
+                          {
+                            "value": "h1",
+                            "label": "h1"
+                          },
+                          {
+                            "value": "h2",
+                            "label": "h2"
+                          },
+                          {
+                            "value": "h3",
+                            "label": "h3"
+                          },
+                          {
+                            "value": "h4",
+                            "label": "h4"
+                          },
+                          {
+                            "value": "h5",
+                            "label": "h5"
+                          },
+                          {
+                            "value": "h6",
+                            "label": "h6"
+                          }
+                        ],
+                        "default": "h3"
+                    },
+                    {
+                        "type": "color",
+                        "id": "header_font_color",
+                        "label": "Header Font Color",
+                        "default": "#000000"
+                    },
+                    {
+                        "type": "font",
+                        "id": "header_font_family",
+                        "label": "Header Font Family"
+                    },                    
+                    {
                         "type": "richtext",
                         "id": "text",
                         "label": "Text",
@@ -120,7 +241,7 @@
                     },
                     {
                         "type": "font",
-                        "id": "text_font",
+                        "id": "text_font_family",
                         "label": "Text Font Family"
                     },
                     {
@@ -166,8 +287,8 @@
                         "max": 200,
                         "step": 2,
                         "unit": "px",
-                        "label": "First Caption Line Height",
-                        "default": 0
+                        "label": "Text Line Height",
+                        "default": 24
                     },
                     {
                         "type": "checkbox",
@@ -183,19 +304,35 @@
                     },
                     {
                         "type": "range",
-                        "id": "background_enabled_text_padding",
+                        "id": "background_text_padding",
                         "min": 0,
-                        "max": 15,
+                        "max": 30,
                         "step": 1,
                         "unit": "%",
-                        "label": "Text Padding(Applicable if background color is selected)",
-                        "default": 6
+                        "label": "Text Padding",
+                        "default": 0
                     },
                     {
                         "type": "checkbox",
                         "id": "switch_blocks",
                         "label": "Switch Blocks",
                         "default": false
+                    }
+                ]
+            },
+            {
+                "type": "spacer-block",
+                "name": "Spacer",
+                "settings":[
+                    {
+                        "type": "range",
+                        "id": "spacer_height",
+                        "min": 0,
+                        "max": 200,
+                        "step": 2,
+                        "unit": "px",
+                        "label": "Spacer Height",
+                        "default": 20
                     }
                 ]
             }
