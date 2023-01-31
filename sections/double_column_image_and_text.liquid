@@ -1,3 +1,67 @@
+<section class="section-wrapper-{{section.id}}">
+    {%- for block in section.blocks -%}
+        {% case block.type %}
+            {%- when 'image' -%}
+                <div class="image-text-wrapper-{{block.id}}">
+                    <div class="image-wrapper-{{block.id}}">
+                        <img src="{{block.settings.image | img_url: 'master'}}">
+                    </div>
+                    <div class="background-wrapper--{{block.id}}">
+                        <div class="text-wrapper-{{block.id}}">
+                            {{block.settings.text}}
+                        </div>
+                    </div>
+                </div>
+            {%- when 'spacer-block' -%}
+                <div class="spacer-wrapper-{{block.id}}">
+                    
+                </div>
+        {% endcase %}
+    {%- endfor -%}
+</section>
+
+<style>
+    {% if section.settings.width == "custom" %}
+        .section-wrapper-{{section.id}}{
+            width: {{section.settings.custom_section_width}}px;
+            margin: 0 auto;
+        }
+
+        {%- else -%}
+            .section-wrapper-{{section.id}}{
+                width: {{section.settings.section_width}}px;
+                margin: 0 auto;
+            }
+
+    {%- endif -%}
+
+
+    {%- for block in section.blocks -%}
+        {% case block.type %}
+            {%- when 'image' -%}
+                {%- if section.settings.width == "custom" -%}
+                    .section-wrapper-{{section.id}} .image-text-wrapper-{{block.id}}{
+                        height: {{section.settings.custom_section_width | times: 0.625 }}px;
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                    {%- else -%}
+                    .section-wrapper-{{section.id}} .image-text-wrapper-{{block.id}}{
+                        height: {{section.settings.section_width | times: 0.625 }}px;
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                {%- endif -%}
+            {%- when 'spacer-block' -%}
+                
+        {% endcase %}
+    {%- endfor -%}
+</style>
+
 {% schema %}
     {
         "name": "Double Column Image Text",
@@ -126,6 +190,12 @@
                         "unit": "%",
                         "label": "Text Padding(Applicable if background color is selected)",
                         "default": 6
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "switch_blocks",
+                        "label": "Switch Blocks",
+                        "default": false
                     }
                 ]
             }
