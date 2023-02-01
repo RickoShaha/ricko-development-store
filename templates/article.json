@@ -806,7 +806,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/04-10-2022-WAX1465-Square.jpg",
-            "image_size": 63,
+            "image_size": 65,
             "gap": 20,
             "include_header": false,
             "header": "Include a header here",
