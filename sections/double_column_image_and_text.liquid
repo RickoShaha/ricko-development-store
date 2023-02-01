@@ -17,6 +17,9 @@
                         <div class="text-wrapper-{{block.id}}">
                             {{block.settings.text}}
                         </div>
+                        {%- if block.settings.add_button == true -%}
+                            <button class="btn ">Shop The Look</button>
+                        {%- endif -%}
                     </div>
                 </div>
             {%- when 'spacer-block' -%}
@@ -100,6 +103,19 @@
                         font-family: {{block.settings.header_font_family}};
                         color: {{block.settings.header_font_color}};
                     }
+                    {%- if block.settings.add_button == true -%}
+                        .background-wrapper--{{block.id}} .btn{
+                            width: 158px;
+                            height: 41px;
+                            background: #333333 0% 0% no-repeat padding-box;
+                            border-radius: 100px;
+                            opacity: 1;
+                            color: #FFFFFF;
+                            border-style: none;
+                            margin-left: 6px;
+                            margin-top: 30px;
+                        }
+                    {%- endif -%}
             {%- when 'spacer-block' -%}
                 .section-wrapper-{{section.id}} .spacer-wrapper-{{block.id}}{
                     height: {{block.settings.spacer_height}}px;
@@ -311,6 +327,12 @@
                         "unit": "%",
                         "label": "Text Padding",
                         "default": 0
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "add_button",
+                        "label": "Add Button",
+                        "default": false
                     },
                     {
                         "type": "checkbox",
