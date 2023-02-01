@@ -1,0 +1,357 @@
+<style>
+    .section-wrapper-{{section.id}}.double-column-image-custom-width{
+        width: {{section.settings.section_width}}px;
+        margin: 0 auto;
+    }
+    {%- for block in section.blocks -%}
+        {%- case block.type -%}
+            {%- when 'image' -%}
+                {%- if block.settings.image_size >= 50 -%} 
+                    .image-wrapper-{{block.id}}.double-image-coustom{
+                        height: {{section.settings.section_width | times: 1.25 | times: 0.01 | times: block.settings.image_size}}px;
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        column-gap: {{block.settings.gap}}px;
+                    }
+                    {%- else -%}
+                    .image-wrapper-{{block.id}}.double-image-coustom{
+                        height: calc({{section.settings.section_width | times: 1.25 | times: 0.01 }}*{{100|minus:block.settings.image_size}})px;
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        column-gap: {{block.settings.gap}}px;
+                    }
+                {%- endif -%}
+                
+                {%- if block.settings.switch_images == true -%}
+                    .image-wrapper-{{block.id}}.double-image-coustom{
+                        flex-direction: row-reverse;    
+                    }
+                {%- endif -%}
+                    .first-image-caption-wrapper-{{block.id}}.first-image-caption-custom{
+                        height: {{section.settings.section_width | times: 1.25 | times: 0.01 | times: block.settings.image_size}}px;
+                        width: {{block.settings.image_size}}%;
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: column;
+                    }
+                    .first-image-wrapper-{{block.id}}.first-image-custom{
+                        height: 90%;
+                        width: 100%;
+                    }
+                    .first-image-wrapper-{{block.id}}.first-image-custom img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                    .first-caption-wrapper-{{block.id}}.first-caption{
+                        height: 10%;
+                        width: 100%;
+                        font-size: {{block.settings.caption_font_size_image1}}px;
+                        font-family: {{block.settings.caption_font_family_image1}};
+                        color: {{block.settings.caption_font_color_image1}};
+                    }
+                    .first-caption-wrapper-{{block.id}}.first-caption p{
+                        text-align: {{block.settings.caption_alignment_image1}};
+                        margin: 0;
+                        line-height: {{block.settings.caption_line_height_image1}}px;
+                    }
+                    .second-image-caption-wrapper-{{block.id}}.second-image-caption-custom{
+                        height: calc({{section.settings.section_width | times: 1.25 | times: 0.01 }}*{{100|minus:block.settings.image_size}}px);
+                        width: {{100 |minus: block.settings.image_size}}%;
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: column;
+                    }
+                    .second-image-wrapper-{{block.id}}.second-image-custom{
+                        height: 90%;
+                        width: 100%;
+                    }
+                    .second-image-wrapper-{{block.id}}.second-image-custom img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                    .second-caption-wrapper-{{block.id}}.second-caption{
+                        height: 10%;
+                        width: 100%;
+                        font-size: {{block.settings.caption_font_size_image2}}px;
+                        font-family: {{block.settings.caption_font_family_image2}};
+                        color: {{block.settings.caption_font_color_image2}};
+                    }
+                    .second-caption-wrapper-{{block.id}}.second-caption p{
+                        text-align: {{block.settings.caption_alignment_image2}};
+                        margin: 0;
+                        line-height: {{block.settings.caption_line_height_image2}}px;
+                    }
+                    
+            {%- when 'spacer-block' -%}
+                .spacer-wrapper-{{block.id}}{
+                    height: {{block.settings.spacer_height}}px;
+                }
+        {%- endcase -%}
+    {%- endfor -%}
+    
+</style>
+
+<div class="section-wrapper-{{section.id}} double-column-image-custom-width">
+    {%- for block in section.blocks -%}
+        {%- case block.type -%}
+            {%- when 'image' -%}
+                <div class="image-wrapper-{{block.id}} double-image-coustom">
+                    <div class="first-image-caption-wrapper-{{block.id}} first-image-caption-custom">
+                        <div class="first-image-wrapper-{{block.id}} first-image-custom">
+                            <img src="{{block.settings.first_image | img_url: 'master'}}">
+                        </div>
+                        {%- if block.settings.add_caption_image1 == true -%}
+                            <div class="first-caption-wrapper-{{block.id}} first-caption">
+                                {{block.settings.caption_image1}}
+                            </div>
+                        {%- endif -%}
+                    </div>
+                    <div class="second-image-caption-wrapper-{{block.id}} second-image-caption-custom">
+                        <div class="second-image-wrapper-{{block.id}} second-image-custom">
+                            <img src="{{block.settings.second_image | img_url: 'master'}}">
+                        </div>
+                        {%- if block.settings.add_caption_image2 == true -%}
+                            <div class="second-caption-wrapper-{{block.id}} second-caption">
+                                {{block.settings.caption_image2}}
+                            </div>
+                        {%- endif -%}
+                    </div>
+                </div>
+            {%- when 'spacer-block' -%}
+                <div class="spacer-wrapper-{{block.id}}">
+                    
+                </div>
+        {%- endcase -%}
+    {%- endfor -%}
+</div>
+
+{% schema %}
+    {
+        "name": "DoubleColumn Image Custom",
+        "tag": "section",
+        "settings": [
+            {
+                "type": "select",
+                "id": "section_width",
+                "label": "Section Width",
+                "options": [
+                    {
+                        "value": "600",
+                        "label": "Small"
+                    },
+                    {
+                        "value": "967",
+                        "label": "Medium"
+                    },
+                    {
+                        "value": "1200",
+                        "label": "Large"
+                    }
+                ],
+                "default": "967"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "image",
+                "name":  "Image",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "first_image",
+                        "label": "Select Image"
+                    },
+                    {
+                        "type": "range",
+                        "id": "image_size",
+                        "min": 25,
+                        "max": 75,
+                        "step": 1,
+                        "unit": "%",
+                        "label": "First Image Size",
+                        "default": 50
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "add_caption_image1",
+                        "label": "Add Caption for First Image",
+                        "default": false
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "caption_image1",
+                        "label": "First Image Caption",
+                        "default": "<p>Add caption for first image</p>"
+                    },
+                    {
+                        "type": "font",
+                        "id": "caption_font_family_image1",
+                        "label": "First Caption Font Family"
+                    },
+                    {
+                        "type": "color",
+                        "id": "caption_font_color_image1",
+                        "label": "First Caption Text Color",
+                        "default": "#000000"
+                    },
+                    {
+                        "type": "range",
+                        "id": "caption_font_size_image1",
+                        "min": 10,
+                        "max": 50,
+                        "step": 1,
+                        "unit": "px",
+                        "label": "First Caption Font Size",
+                        "default": 15
+                    },
+                    {
+                        "type": "select",
+                        "id": "caption_alignment_image1",
+                        "label": "First Caption Alignment",
+                        "options": [
+                            {
+                                "value": "left",
+                                "label": "Left"
+                            },
+                            {
+                                "value": "center",
+                                "label": "Center"
+                            },
+                            {
+                                "value": "right",
+                                "label": "Right"
+                            }
+                        ],
+                        "default": "left"
+                    },
+                    {
+                        "type": "range",
+                        "id": "caption_line_height_image1",
+                        "min": 0,
+                        "max": 200,
+                        "step": 2,
+                        "unit": "px",
+                        "label": "First Caption Line Height",
+                        "default": 24
+                    },
+
+                    {
+                        "type": "checkbox",
+                        "id": "switch_images",
+                        "label": "Switch Images",
+                        "default": false
+                    },
+                    {
+                        "type": "range",
+                        "id": "gap",
+                        "min": 0,
+                        "max": 200,
+                        "step": 2,
+                        "unit": "px",
+                        "label": "Gap Between Images",
+                        "default": 0
+                    },
+                    
+                    {
+                        "type": "image_picker",
+                        "id": "second_image",
+                        "label": "Select Second Image"
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "add_caption_image2",
+                        "label": "Add Caption for Second Image",
+                        "default": false
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "caption_image2",
+                        "label": "Second Image Caption",
+                        "default": "<p>Add caption for second image</p>"
+                    },
+                    {
+                        "type": "font",
+                        "id": "caption_font_family_image2",
+                        "label": "Second Caption Font Family"
+                    },
+                    {
+                        "type": "color",
+                        "id": "caption_font_color_image2",
+                        "label": "Second Caption Text Color",
+                        "default": "#000000"
+                    },
+                    {
+                        "type": "range",
+                        "id": "caption_font_size_image2",
+                        "min": 10,
+                        "max": 50,
+                        "step": 1,
+                        "unit": "px",
+                        "label": "Second Caption Font Size",
+                        "default": 15
+                    },
+                    {
+                        "type": "select",
+                        "id": "caption_alignment_image2",
+                        "label": "Second Caption Alignment",
+                        "options": [
+                            {
+                                "value": "left",
+                                "label": "Left"
+                            },
+                            {
+                                "value": "center",
+                                "label": "Center"
+                            },
+                            {
+                                "value": "right",
+                                "label": "Right"
+                            }
+                        ],
+                        "default": "left"
+                    },
+                    {
+                        "type": "range",
+                        "id": "caption_line_height_image2",
+                        "min": 0,
+                        "max": 200,
+                        "step": 2,
+                        "unit": "px",
+                        "label": "Second Caption Line Height",
+                        "default": 24
+                    }
+                ]
+            },
+            {
+                "type": "spacer-block",
+                "name": "Spacer",
+                "settings":[
+                    {
+                        "type": "range",
+                        "id": "spacer_height",
+                        "min": 0,
+                        "max": 200,
+                        "step": 2,
+                        "unit": "px",
+                        "label": "Spacer Height",
+                        "default": 20
+                    }
+                ]
+            }
+        ],
+        "presets" : [
+            {
+                "name": "Double Column Image Custom",
+                "blocks":[
+                    {
+                        "type": "image"
+                    }
+                ]
+            }
+        ]
+    }
+{% endschema %}
