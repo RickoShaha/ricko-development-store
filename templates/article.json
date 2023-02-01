@@ -628,7 +628,7 @@
             "text_alignment": "left",
             "text_line_height": 24,
             "background_enable_text": false,
-            "background_color_text": "#FFFFFF",
+            "background_color_text": "#ffffff",
             "background_text_padding": 0,
             "switch_blocks": false
           }
@@ -657,7 +657,7 @@
             "text_alignment": "left",
             "text_line_height": 24,
             "background_enable_text": false,
-            "background_color_text": "#FFFFFF",
+            "background_color_text": "#ffffff",
             "background_text_padding": 0,
             "switch_blocks": true
           }
@@ -701,7 +701,7 @@
             "text_alignment": "left",
             "text_line_height": 24,
             "background_enable_text": true,
-            "background_color_text": "#FFFFFF",
+            "background_color_text": "#ffffff",
             "background_text_padding": 6,
             "switch_blocks": false
           }
@@ -791,7 +791,7 @@
             "text_alignment": "left",
             "text_line_height": 24,
             "background_enable_text": false,
-            "background_color_text": "#FFFFFF",
+            "background_color_text": "#ffffff",
             "background_text_padding": 0,
             "switch_blocks": false
           }
@@ -820,7 +820,7 @@
             "text_alignment": "left",
             "text_line_height": 26,
             "background_enable_text": false,
-            "background_color_text": "#FFFFFF",
+            "background_color_text": "#ffffff",
             "background_text_padding": 0,
             "switch_blocks": true
           }
@@ -842,6 +842,41 @@
         "section_width": "1200",
         "custom_section_width": 600
       }
+    },
+    "1c99b440-46d4-4481-986d-1b053e84ccd3": {
+      "type": "double-column-image-customized",
+      "blocks": {
+        "template--17629556736315__1c99b440-46d4-4481-986d-1b053e84ccd3-1675258257f7d43a4d-0": {
+          "type": "image",
+          "settings": {
+            "first_image": "shopify:\/\/shop_images\/04-10-2022-WAX1307.jpg",
+            "image_size": 56,
+            "add_caption_image1": true,
+            "caption_image1": "<p>Model wears <a href=\"\/products\/puma-suede-classic-regal\" target=\"_blank\" title=\"PUMA | SUEDE CLASSIC REGAL\">Whiting Shirt Cosmic Papaya Check <\/a>with <a href=\"\/products\/vans-classic-slip-on-perforated-suede\" target=\"_blank\" title=\"VANS | CLASSIC SLIP-ON (PERFORATED SUEDE)\">Dean T Shirt Black <\/a>and <a href=\"\/products\/herschel-iona\" target=\"_blank\" title=\"HERSCHEL | IONA\">Pleat Trousers Black<\/a><\/p>",
+            "caption_font_family_image1": "",
+            "caption_font_color_image1": "#000000",
+            "caption_font_size_image1": 15,
+            "caption_alignment_image1": "left",
+            "caption_line_height_image1": 24,
+            "switch_images": false,
+            "gap": 20,
+            "second_image": "shopify:\/\/shop_images\/04-10-2022-WAX1517.jpg",
+            "add_caption_image2": true,
+            "caption_image2": "<p>Model wears <a href=\"\/products\/puma-suede-classic-regal\" target=\"_blank\" title=\"PUMA | SUEDE CLASSIC REGAL\">Oz Shirt Grey and Yellow Check <\/a>with <a href=\"\/products\/timberland-mens-6-inch-premium-boot\" target=\"_blank\" title=\"TIMBERLAND | MENS 6 INCH PREMIUM BOOT\">Fisherman Beanie Khaki<\/a> and <a href=\"\/products\/vans-era-59-desert-cowboy\" target=\"_blank\" title=\"VANS | ERA 59 (DESERT COWBOY)\">Pleat Trousers Black<\/a><\/p>",
+            "caption_font_family_image2": "",
+            "caption_font_color_image2": "#000000",
+            "caption_font_size_image2": 13,
+            "caption_alignment_image2": "left",
+            "caption_line_height_image2": 22
+          }
+        }
+      },
+      "block_order": [
+        "template--17629556736315__1c99b440-46d4-4481-986d-1b053e84ccd3-1675258257f7d43a4d-0"
+      ],
+      "settings": {
+        "section_width": "1200"
+      }
     }
   },
   "order": [
@@ -859,6 +894,7 @@
     "df9cc594-a357-4903-a0d7-35084a8c9008",
     "3aaa4aec-bae3-4720-9f4c-3a051969a66c",
     "873a49d5-cb67-463a-9533-7b8fa5d8347f",
-    "bfc8a6a4-92f1-4a85-9077-d24894a3dd9b"
+    "bfc8a6a4-92f1-4a85-9077-d24894a3dd9b",
+    "1c99b440-46d4-4481-986d-1b053e84ccd3"
   ]
 }
