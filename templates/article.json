@@ -679,6 +679,96 @@
         "section_width": "967",
         "custom_section_width": 600
       }
+    },
+    "873a49d5-cb67-463a-9533-7b8fa5d8347f": {
+      "type": "double_column_image_and_text",
+      "blocks": {
+        "template--17629556736315__873a49d5-cb67-463a-9533-7b8fa5d8347f-167523844446bc75b4-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/04-10-2022-WAX1307.jpg",
+            "image_size": 50,
+            "gap": 0,
+            "include_header": true,
+            "header": "Whiting Overshirt",
+            "header_size": "h2",
+            "header_font_color": "#333333",
+            "header_font_family": "",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu euismod ante, quis finibus odio. Aenean scelerisque consectetur pharetra. In condimentum est eu eros malesuada aliquam. Aenean iaculis ligula a quam vehicula mattis. Nulla fringilla bibendum erat id molestie. Quisque id arcu in libero euismod rutrum sed ut libero.<\/p><p>Nunc et dolor non ex elementum varius vel ut ligula. Sed id felis ex. Aenean tristique lobortis est, vitae consequat turpis sagittis varius. Quisque pharetra, dui ornare iaculis consectetur, magna velit condimentum nulla, non tristique nisl lorem ac risus. Cras accumsan eu est in dignissim. Aenean ligula felis, rutrum in augue quis, consectetur porta libero.<\/p>",
+            "text_font_family": "",
+            "text_font_color": "#333333",
+            "text_font_size": 15,
+            "text_alignment": "left",
+            "text_line_height": 24,
+            "background_enable_text": true,
+            "background_color_text": "#FFFFFF",
+            "background_text_padding": 6,
+            "switch_blocks": false
+          }
+        },
+        "d7a896be-a17d-444c-9b85-ab056eac16e8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/04-10-2022-WAX1307.jpg",
+            "image_size": 50,
+            "gap": 0,
+            "include_header": true,
+            "header": "Whiting Overshirt",
+            "header_size": "h2",
+            "header_font_color": "#ffffff",
+            "header_font_family": "Helvetica, Arial, sans-serif",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu euismod ante, quis finibus odio. Aenean scelerisque consectetur pharetra. In condimentum est eu eros malesuada aliquam. Aenean iaculis ligula a quam vehicula mattis. Nulla fringilla bibendum erat id molestie. Quisque id arcu in libero euismod rutrum sed ut libero.<\/p><p>Nunc et dolor non ex elementum varius vel ut ligula. Sed id felis ex. Aenean tristique lobortis est, vitae consequat.<\/p>",
+            "text_font_family": "Helvetica, Arial, sans-serif",
+            "text_font_color": "#ffffff",
+            "text_font_size": 15,
+            "text_alignment": "left",
+            "text_line_height": 24,
+            "background_enable_text": true,
+            "background_color_text": "#4e4e3f",
+            "background_text_padding": 6,
+            "switch_blocks": true
+          }
+        },
+        "0a351ee8-3e85-4c7f-b18d-ecff1486736f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/04-10-2022-WAX1307.jpg",
+            "image_size": 50,
+            "gap": 0,
+            "include_header": true,
+            "header": "Whiting Overshirt",
+            "header_size": "h3",
+            "header_font_color": "#333333",
+            "header_font_family": "Helvetica, Arial, sans-serif",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu euismod ante, quis finibus odio. Aenean scelerisque consectetur pharetra. In condimentum est eu eros malesuada aliquam. Aenean iaculis ligula a quam vehicula mattis. Nulla fringilla bibendum erat id molestie. Quisque id arcu in libero euismod rutrum sed ut libero.<\/p><p>Nunc et dolor non ex elementum varius vel ut ligula. Sed id felis ex. Aenean tristique lobortis est, vitae consequat turpis sagittis varius. Quisque pharetra, dui ornare iaculis consectetur, magna velit condimentum nulla, non tristique nisl lorem ac risus. Cras accumsan eu est in dignissim. Aenean ligula felis, rutrum in augue quis, consectetur porta libero.<\/p>",
+            "text_font_family": "Helvetica, Arial, sans-serif",
+            "text_font_color": "#333333",
+            "text_font_size": 15,
+            "text_alignment": "left",
+            "text_line_height": 24,
+            "background_enable_text": true,
+            "background_color_text": "#a8a897",
+            "background_text_padding": 6,
+            "switch_blocks": false
+          }
+        },
+        "824ea3f1-8a40-46e6-9dc6-acee2dd34eec": {
+          "type": "spacer-block",
+          "settings": {
+            "spacer_height": 60
+          }
+        }
+      },
+      "block_order": [
+        "template--17629556736315__873a49d5-cb67-463a-9533-7b8fa5d8347f-167523844446bc75b4-0",
+        "d7a896be-a17d-444c-9b85-ab056eac16e8",
+        "0a351ee8-3e85-4c7f-b18d-ecff1486736f",
+        "824ea3f1-8a40-46e6-9dc6-acee2dd34eec"
+      ],
+      "settings": {
+        "section_width": "967",
+        "custom_section_width": 600
+      }
     }
   },
   "order": [
@@ -694,6 +784,7 @@
     "f19ec4ef-d216-47c3-93ef-8df3fedc88ce",
     "99bd5bd1-3fb0-4b2a-aab7-e15518eca8f2",
     "df9cc594-a357-4903-a0d7-35084a8c9008",
-    "3aaa4aec-bae3-4720-9f4c-3a051969a66c"
+    "3aaa4aec-bae3-4720-9f4c-3a051969a66c",
+    "873a49d5-cb67-463a-9533-7b8fa5d8347f"
   ]
 }
