@@ -607,27 +607,73 @@
         "custom_section_width": 600
       }
     },
-    "61c78986-6615-4561-b395-ae82ec369293": {
+    "3aaa4aec-bae3-4720-9f4c-3a051969a66c": {
       "type": "double_column_image_and_text",
       "blocks": {
-        "template--17629556736315__61c78986-6615-4561-b395-ae82ec369293-1675093919675957d2-0": {
+        "template--17629556736315__3aaa4aec-bae3-4720-9f4c-3a051969a66c-167523844446bc75b4-0": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/04-10-2022-WAX1517.jpg",
-            "text": "<p>Edit text here<\/p>",
-            "text_font": "",
+            "image": "shopify:\/\/shop_images\/04-10-2022-WAX1307.jpg",
+            "image_size": 50,
+            "gap": 20,
+            "include_header": false,
+            "header": "Include a header here",
+            "header_size": "h3",
+            "header_font_color": "#000000",
+            "header_font_family": "",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu euismod ante, quis finibus odio. Aenean scelerisque consectetur pharetra. In condimentum est eu eros malesuada aliquam. Aenean iaculis ligula a quam vehicula mattis. Nulla fringilla bibendum erat id molestie. Quisque id arcu in libero euismod rutrum sed ut libero. Nunc et dolor non ex elementum varius vel ut ligula. Sed id felis ex. Aenean tristique lobortis est, vitae consequat turpis sagittis varius. Quisque pharetra, dui ornare iaculis consectetur, magna velit condimentum nulla, non tristique nisl lorem ac risus. Cras accumsan eu est in dignissim. Aenean ligula felis, rutrum in augue quis, consectetur porta libero.<\/p><p>Nunc faucibus ornare risus nec accumsan. Donec sed nisi rutrum, mattis diam a, tempus risus. Morbi at lectus elementum, laoreet orci sit amet, rutrum ipsum. Integer vel aliquet risus, sed pharetra justo. Pellentesque commodo eu quam vel hendrerit. Mauris non turpis fermentum, faucibus nulla quis, convallis nulla. Ut efficitur metus eros, quis consequat nunc tincidunt et. Sed eleifend arcu vel porta cursus. Mauris ultrices mauris vel lacus hendrerit sodales. Quisque a mattis turpis. Sed nisl purus, malesuada ac ultricies iaculis, iaculis id tellus. Morbi hendrerit ipsum sit amet lacus convallis tincidunt. Praesent quis libero rutrum, pharetra ex non, tincidunt justo. Nulla facilisi.<\/p>",
+            "text_font_family": "",
             "text_font_color": "#000000",
             "text_font_size": 15,
             "text_alignment": "left",
-            "text_line_height": 0,
+            "text_line_height": 24,
             "background_enable_text": false,
-            "background_color_text": "#ffffff",
-            "background_enabled_text_padding": 6
+            "background_color_text": "#FFFFFF",
+            "background_text_padding": 0,
+            "switch_blocks": false
+          }
+        },
+        "9f87e952-e407-456f-b75c-516184b8d2e6": {
+          "type": "spacer-block",
+          "settings": {
+            "spacer_height": 60
+          }
+        },
+        "bb78050b-5fc2-487e-909c-150cb64b1787": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/04-10-2022-WAX1307.jpg",
+            "image_size": 50,
+            "gap": 20,
+            "include_header": false,
+            "header": "Include a header here",
+            "header_size": "h3",
+            "header_font_color": "#000000",
+            "header_font_family": "Helvetica, Arial, sans-serif",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu euismod ante, quis finibus odio. Aenean scelerisque consectetur pharetra. In condimentum est eu eros malesuada aliquam. Aenean iaculis ligula a quam vehicula mattis. Nulla fringilla bibendum erat id molestie. Quisque id arcu in libero euismod rutrum sed ut libero. Nunc et dolor non ex elementum varius vel ut ligula. Sed id felis ex. Aenean tristique lobortis est, vitae consequat turpis sagittis varius. Quisque pharetra, dui ornare iaculis consectetur, magna velit condimentum nulla, non tristique nisl lorem ac risus. Cras accumsan eu est in dignissim. Aenean ligula felis, rutrum in augue quis, consectetur porta libero.<\/p><p>Nunc faucibus ornare risus nec accumsan. Donec sed nisi rutrum, mattis diam a, tempus risus. Morbi at lectus elementum, laoreet orci sit amet, rutrum ipsum. Integer vel aliquet risus, sed pharetra justo. Pellentesque commodo eu quam vel hendrerit. Mauris non turpis fermentum, faucibus nulla quis, convallis nulla. Ut efficitur metus eros, quis consequat nunc tincidunt et. Sed eleifend arcu vel porta cursus. Mauris ultrices mauris vel lacus hendrerit sodales. Quisque a mattis turpis. Sed nisl purus, malesuada ac ultricies iaculis, iaculis id tellus. Morbi hendrerit ipsum sit amet lacus convallis tincidunt. Praesent quis libero rutrum, pharetra ex non, tincidunt justo. Nulla facilisi.<\/p>",
+            "text_font_family": "Helvetica, Arial, sans-serif",
+            "text_font_color": "#000000",
+            "text_font_size": 15,
+            "text_alignment": "left",
+            "text_line_height": 24,
+            "background_enable_text": false,
+            "background_color_text": "#FFFFFF",
+            "background_text_padding": 0,
+            "switch_blocks": true
+          }
+        },
+        "e83c825f-5827-4f31-a21e-21dba6cb8419": {
+          "type": "spacer-block",
+          "settings": {
+            "spacer_height": 60
           }
         }
       },
       "block_order": [
-        "template--17629556736315__61c78986-6615-4561-b395-ae82ec369293-1675093919675957d2-0"
+        "template--17629556736315__3aaa4aec-bae3-4720-9f4c-3a051969a66c-167523844446bc75b4-0",
+        "9f87e952-e407-456f-b75c-516184b8d2e6",
+        "bb78050b-5fc2-487e-909c-150cb64b1787",
+        "e83c825f-5827-4f31-a21e-21dba6cb8419"
       ],
       "settings": {
         "section_width": "967",
@@ -648,6 +694,6 @@
     "f19ec4ef-d216-47c3-93ef-8df3fedc88ce",
     "99bd5bd1-3fb0-4b2a-aab7-e15518eca8f2",
     "df9cc594-a357-4903-a0d7-35084a8c9008",
-    "61c78986-6615-4561-b395-ae82ec369293"
+    "3aaa4aec-bae3-4720-9f4c-3a051969a66c"
   ]
 }
