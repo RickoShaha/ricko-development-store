@@ -630,6 +630,7 @@
             "background_enable_text": false,
             "background_color_text": "#ffffff",
             "background_text_padding": 0,
+            "add_button": false,
             "switch_blocks": false
           }
         },
@@ -659,6 +660,7 @@
             "background_enable_text": false,
             "background_color_text": "#ffffff",
             "background_text_padding": 0,
+            "add_button": false,
             "switch_blocks": true
           }
         },
@@ -703,6 +705,7 @@
             "background_enable_text": true,
             "background_color_text": "#ffffff",
             "background_text_padding": 6,
+            "add_button": false,
             "switch_blocks": false
           }
         },
@@ -726,6 +729,7 @@
             "background_enable_text": true,
             "background_color_text": "#4e4e3f",
             "background_text_padding": 6,
+            "add_button": true,
             "switch_blocks": true
           }
         },
@@ -749,6 +753,7 @@
             "background_enable_text": true,
             "background_color_text": "#a8a897",
             "background_text_padding": 6,
+            "add_button": false,
             "switch_blocks": false
           }
         },
@@ -793,6 +798,7 @@
             "background_enable_text": false,
             "background_color_text": "#ffffff",
             "background_text_padding": 0,
+            "add_button": false,
             "switch_blocks": false
           }
         },
@@ -822,6 +828,7 @@
             "background_enable_text": false,
             "background_color_text": "#ffffff",
             "background_text_padding": 0,
+            "add_button": false,
             "switch_blocks": true
           }
         },
