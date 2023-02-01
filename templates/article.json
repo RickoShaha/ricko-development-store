@@ -824,12 +824,19 @@
             "background_text_padding": 0,
             "switch_blocks": true
           }
+        },
+        "1e32d7a7-3788-42f0-b76a-b818e74e34b0": {
+          "type": "spacer-block",
+          "settings": {
+            "spacer_height": 20
+          }
         }
       },
       "block_order": [
         "template--17629556736315__bfc8a6a4-92f1-4a85-9077-d24894a3dd9b-167523844446bc75b4-0",
         "5796e5ad-67df-4b75-9f97-adeeca45dcec",
-        "1ac902ce-5d49-4384-bf09-db8f680339ec"
+        "1ac902ce-5d49-4384-bf09-db8f680339ec",
+        "1e32d7a7-3788-42f0-b76a-b818e74e34b0"
       ],
       "settings": {
         "section_width": "1200",
