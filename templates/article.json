@@ -769,6 +769,41 @@
         "section_width": "967",
         "custom_section_width": 600
       }
+    },
+    "bfc8a6a4-92f1-4a85-9077-d24894a3dd9b": {
+      "type": "double_column_image_and_text",
+      "blocks": {
+        "template--17629556736315__bfc8a6a4-92f1-4a85-9077-d24894a3dd9b-167523844446bc75b4-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/04-10-2022-WAX1465-Square.jpg",
+            "image_size": 55,
+            "gap": 20,
+            "include_header": false,
+            "header": "Include a header here",
+            "header_size": "h3",
+            "header_font_color": "#000000",
+            "header_font_family": "",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu euismod ante, quis finibus odio. Aenean scelerisque consectetur pharetra. In condimentum est eu eros malesuada aliquam. Aenean iaculis ligula a quam vehicula mattis. Nulla fringilla bibendum erat id molestie. Quisque id arcu in libero euismod rutrum sed ut libero. Nunc et dolor non ex elementum varius vel ut ligula. Sed id felis ex. Aenean tristique lobortis est, vitae consequat turpis sagittis varius. Quisque pharetra, dui ornare iaculis consectetur, magna velit condimentum nulla, non tristique nisl lorem ac risus. Cras accumsan eu est in dignissim. Aenean ligula felis, rutrum in augue quis, consectetur porta libero.<\/p><p>Nunc faucibus ornare risus nec accumsan. Donec sed nisi rutrum, mattis diam a, tempus risus. Morbi at lectus elementum, laoreet orci sit amet, rutrum ipsum. Integer vel aliquet risus, sed pharetra justo. Pellentesque commodo eu quam vel hendrerit. Mauris non turpis fermentum, faucibus nulla quis, convallis nulla. Ut efficitur metus eros, quis consequat nunc tincidunt et. Sed eleifend arcu vel porta cursus. Mauris ultrices mauris vel lacus hendrerit sodales. Quisque a mattis turpis. Sed nisl purus, malesuada ac ultricies iaculis, iaculis id tellus. Morbi hendrerit ipsum sit amet lacus convallis tincidunt. Praesent quis libero rutrum, pharetra ex non, tincidunt justo. Nulla facilisi.<\/p>",
+            "text_font_family": "",
+            "text_font_color": "#000000",
+            "text_font_size": 15,
+            "text_alignment": "left",
+            "text_line_height": 24,
+            "background_enable_text": false,
+            "background_color_text": "#FFFFFF",
+            "background_text_padding": 0,
+            "switch_blocks": false
+          }
+        }
+      },
+      "block_order": [
+        "template--17629556736315__bfc8a6a4-92f1-4a85-9077-d24894a3dd9b-167523844446bc75b4-0"
+      ],
+      "settings": {
+        "section_width": "1200",
+        "custom_section_width": 600
+      }
     }
   },
   "order": [
@@ -785,6 +820,7 @@
     "99bd5bd1-3fb0-4b2a-aab7-e15518eca8f2",
     "df9cc594-a357-4903-a0d7-35084a8c9008",
     "3aaa4aec-bae3-4720-9f4c-3a051969a66c",
-    "873a49d5-cb67-463a-9533-7b8fa5d8347f"
+    "873a49d5-cb67-463a-9533-7b8fa5d8347f",
+    "bfc8a6a4-92f1-4a85-9077-d24894a3dd9b"
   ]
 }
