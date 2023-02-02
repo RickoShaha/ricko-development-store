@@ -1,0 +1,199 @@
+<style>
+    .section-wrapper-{{section.id}}{
+                width: {{section.settings.section_width}}px;
+                margin: 0 auto;
+            }
+
+    @media screen and (max-width: 375px) {
+        .section-wrapper-{{section.id}}{
+            width: 375px;
+            padding: 0 15px 0 15px;
+            margin: 0 auto;
+        }
+      }
+
+    {%- for block in section.blocks -%}
+        {%- case block.type -%}
+            {%- when 'faq' -%}
+                .quetion-answer-wrapper-{{block.id}}.question-answer{
+                    display: flex;
+                    flex-direction: column;
+                }
+                .question-wrapper-{{block.id}}.question{
+                    width: 100%;
+                    font-weight: bold;
+                    font-size: {{block.settings.question_font_size}}px;
+                    font-family: {{block.settings.question_font_family}};
+                    color: {{block.settings.question_font_color}};
+                    margin-bottom: 30px;
+                }
+                @media screen and (max-width: 375px) {
+                    .question-wrapper-{{block.id}}.question{
+                        margin-bottom: 22px;
+                    }
+                  }
+                .question-wrapper-{{block.id}}.question p{
+                    margin: 0;
+                }
+                .answer-wrapper-{{block.id}}.answer{
+                    width: 100%;
+                    font-size: {{block.settings.answer_font_size}}px;
+                    font-family: {{block.settings.answer_font_family}};
+                    color: {{block.settings.answer_font_color}};
+                    border-left: 2px solid {{block.settings.question_font_color}};
+                    padding-left: 28px;
+                    margin-bottom: 60px;
+                }
+                @media screen and (max-width: 375px) {
+                    .answer-wrapper-{{block.id}}.answer{
+                        margin-bottom: 45px;
+                    }
+                  }
+                .answer-wrapper-{{block.id}}.answer p{
+                    margin: 0;
+                }
+            {%- when 'spacer-block' -%}
+                <div class="spacer-wrapper-{{block.id}}">
+                    
+                </div>
+        {%- endcase -%}
+    {%- endfor -%}
+    
+</style>
+
+<div class="section-wrapper-{{section.id}} faq-section">
+    {%- for block in section.blocks -%}
+        {%- case block.type -%}
+            {%- when 'faq' -%}
+                <div class="quetion-answer-wrapper-{{block.id}} question-answer">
+                    <div class="question-wrapper-{{block.id}} question">
+                        {{block.settings.question}}
+                    </div>
+                    <div class="answer-wrapper-{{block.id}} answer">
+                        {{block.settings.answer}}
+                    </div>
+                </div>
+            {%- when 'spacer-block' -%}
+                <div class="spacer-wrapper-{{block.id}}">
+                    
+                </div>
+        {%- endcase -%}
+    {%- endfor -%}
+</div>
+
+{% schema %}
+    {
+        "name": "Faq Section",
+        "tag": "section",
+        "settings": [
+            {
+                "type": "select",
+                "id": "section_width",
+                "label": "Section Width",
+                "options": [
+                    {
+                        "value": "600",
+                        "label": "Small"
+                    },
+                    {
+                        "value": "967",
+                        "label": "Medium"
+                    },
+                    {
+                        "value": "1200",
+                        "label": "Large"
+                    }
+                ],
+                "default": "967"
+            }
+        ],
+        "blocks" : [
+            {
+                "type" : "faq",
+                "name" : "Frequently Asked Question",
+                "settings": [
+                    {
+                        "type": "richtext",
+                        "id": "question",
+                        "label": "Question",
+                        "default": "<p>Put Question here</p>"
+                    },
+                    {
+                        "type": "font",
+                        "id": "question_font_family",
+                        "label": "Question Font Family"
+                    },
+                    {
+                        "type": "color",
+                        "id": "question_font_color",
+                        "label": "Question Text Color",
+                        "default": "#000000"
+                    },
+                    {
+                        "type": "range",
+                        "id": "question_font_size",
+                        "min": 10,
+                        "max": 50,
+                        "step": 1,
+                        "unit": "px",
+                        "label": "Question Font Size",
+                        "default": 15
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "answer",
+                        "label": "Answer",
+                        "default": "<p>Put Answer here</p>"
+                    },
+                    {
+                        "type": "font",
+                        "id": "answer_font_family",
+                        "label": "Answer Font Family"
+                    },
+                    {
+                        "type": "color",
+                        "id": "answer_font_color",
+                        "label": "Answer Text Color",
+                        "default": "#000000"
+                    },
+                    {
+                        "type": "range",
+                        "id": "answer_font_size",
+                        "min": 10,
+                        "max": 50,
+                        "step": 1,
+                        "unit": "px",
+                        "label": "Answer Font Size",
+                        "default": 15
+                    }
+                ]
+            },
+            {
+                "type": "spacer-block",
+                "name": "Spacer",
+                "settings":[
+                    {
+                        "type": "range",
+                        "id": "spacer_height",
+                        "min": 0,
+                        "max": 200,
+                        "step": 2,
+                        "unit": "px",
+                        "label": "Spacer Height",
+                        "default": 20
+                    }
+                ]
+            }
+        ],
+        "presets" : [
+            {
+                "name": "FAQ",
+                "blocks":[
+                    {
+                        "type": "faq"
+                    }
+                ]
+            }
+        ]
+    }
+{% endschema %}
