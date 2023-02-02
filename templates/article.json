@@ -44,7 +44,7 @@
           "type": "text",
           "settings": {
             "paragraph": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu euismod ante, quis finibus odio. Aenean scelerisque consectetur pharetra. In condimentum est eu eros malesuada aliquam.<\/p>",
-            "paragraph_font_family": "",
+            "paragraph_font_family": "'Times New Roman', Times, serif",
             "paragraph_font_color": "#333333",
             "paragraph_font_size": 24
           }
@@ -142,12 +142,6 @@
     "a4490867-64ea-4550-b333-fe235f0258ba": {
       "type": "single-column-image-with-text",
       "blocks": {
-        "a0d90038-e34e-4869-83c8-e794def25966": {
-          "type": "spacer-block",
-          "settings": {
-            "spacer_height": 80
-          }
-        },
         "template--17629556736315__a4490867-64ea-4550-b333-fe235f0258ba-1675065813c9adb45f-0": {
           "type": "image",
           "settings": {
@@ -169,7 +163,6 @@
         }
       },
       "block_order": [
-        "a0d90038-e34e-4869-83c8-e794def25966",
         "template--17629556736315__a4490867-64ea-4550-b333-fe235f0258ba-1675065813c9adb45f-0",
         "891d1ab7-c377-4684-a78a-850bd12a8d03"
       ],
