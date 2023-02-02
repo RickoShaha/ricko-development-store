@@ -68,6 +68,13 @@
                 margin: 0 auto;
             }
     {% endif %}
+    @media screen and (max-width: 375px) {
+        .section-wrapper-{{section.id}}{
+            width: 375px;
+            padding: 0 15px 0 15px;
+            margin: 0 auto;
+        }
+      }
     {%- for block in section.blocks -%}
         {%- case block.type -%}
             {%-when 'image'%}
@@ -108,8 +115,22 @@
                             }
                         {%- endif -%}
                 {%-  endif -%}
-                
-                
+
+                {%- if section.settings.section_width == "967" or section.settings.section_width == "1200" -%}
+                    @media screen and (max-width: 375px) {
+                        .section-wrapper-{{section.id}} .image-wrapper-{{block.id}}.double-image{
+                            height: 100%;
+                            flex-direction: column;
+                        }
+                    }
+                    {%- else -%}
+                    @media screen and (max-width: 375px) {
+                        .section-wrapper-{{section.id}} .image-wrapper-{{block.id}}.double-image{
+                            height: 216px;
+                        }
+                    }
+                {%- endif -%}
+                    
                 {%- if block.settings.background_enable_image1 == true -%}
                     .background-image-wrapper-{{block.id}}.background-enabled-image1-{{block.id}}{
                         height: 100%;
@@ -120,6 +141,19 @@
                         align-items: center;
                         padding: {{block.settings.background_enabled_image1_padding}}%;
                     }
+                    {%- if section.settings.section_width == "967" or section.settings.section_width == "1200" -%}
+                        @media screen and (max-width: 375px) {
+                            .background-image-wrapper-{{block.id}}.background-enabled-image1-{{block.id}}{
+                                width: 100%
+                            }
+                        }
+                        {%- else -%}
+                        @media screen and (max-width: 375px) {
+                            .background-image-wrapper-{{block.id}}.background-enabled-image1-{{block.id}}{
+                                width: 50%;
+                            }
+                        }
+                    {%- endif -%}
                         {%- if section.settings.section_width == "custom" -%}
                             .image-wrapper-{{block.id}}.image1{
                                 height: 100%;
@@ -146,6 +180,13 @@
                         height: 100%;
                         width: 50%;
                     }
+                    {%- if section.settings.section_width == "967" or section.settings.section_width == "1200" -%}
+                        @media screen and (max-width: 375px) {
+                            .image-wrapper-{{block.id}}.image1{
+                                width: 100%;
+                            }
+                        }
+                    {%- endif -%}
                 {%- endif -%}
                         .image-wrapper-{{block.id}}.image1 img{
                             width: 100%;
@@ -171,6 +212,19 @@
                         align-items: center;
                         padding: {{block.settings.background_enabled_image2_padding}}%;
                     }
+                    {%- if section.settings.section_width == "967" or section.settings.section_width == "1200" -%}
+                        @media screen and (max-width: 375px) {
+                            .background-image-wrapper-{{block.id}}.background-enabled-image2-{{block.id}}{
+                                width: 100%;
+                            }
+                        }
+                        {%- else -%}
+                        @media screen and (max-width: 375px) {
+                            .background-image-wrapper-{{block.id}}.background-enabled-image2-{{block.id}}{
+                                width: 50%;
+                            }
+                        }
+                    {%- endif -%}
                         {%- if section.settings.section_width == "custom" -%}
                             .image-wrapper-{{block.id}}.image2{
                                 height: 100%;
@@ -197,6 +251,13 @@
                         height: 100%;
                         width: 50%;
                     }
+                    {%- if section.settings.section_width == "967" or section.settings.section_width == "1200" -%}
+                        @media screen and (max-width: 375px) {
+                            .image-wrapper-{{block.id}}.image2{
+                                width: 100%;
+                            }
+                        }
+                    {%- endif -%}
                 {%- endif -%}
                         .image-wrapper-{{block.id}}.image2 img{
                             width: 100%;
