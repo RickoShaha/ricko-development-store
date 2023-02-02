@@ -45,6 +45,14 @@
 
     {%- endif -%}
 
+    @media screen and (max-width: 375px) {
+        .section-wrapper-{{section.id}}{
+            width: 375px;
+            
+            margin: 0 auto;
+        }
+      }
+
 
     {%- for block in section.blocks -%}
         {% case block.type %}
@@ -66,14 +74,33 @@
                         column-gap: {{block.settings.gap}}px;
                     }
                 {%- endif -%}
+                @media screen and (max-width: 375px) {
+                    .section-wrapper-{{section.id}} .image-text-wrapper-{{block.id}}{
+                        height: 100%;
+                        flex-direction: column;
+                        line-height: 0px;           
+                    }
+                  }
                 {%- if block.settings.switch_blocks == true -%}
                     .section-wrapper-{{section.id}} .image-text-wrapper-{{block.id}}{
                         flex-direction: row-reverse;    
                     }
+                    @media screen and (max-width: 375px) {
+                        .section-wrapper-{{section.id}} .image-text-wrapper-{{block.id}}{
+                            height: 100%;
+                            flex-direction: column;
+                            line-height: 0px;           
+                        }
+                      }
                 {%- endif -%}
                     .image-wrapper-{{block.id}}{
                         width: {{block.settings.image_size}}%;
                     }
+                    @media screen and (max-width: 375px) {
+                        .image-wrapper-{{block.id}}{
+                            width: 100%;
+                        }
+                      }
                     .image-wrapper-{{block.id}} img{
                         height: 100%;
                         width: 100%;
@@ -83,6 +110,11 @@
                         width: {{100 | minus: block.settings.image_size}}%;
                         padding: {{block.settings.background_text_padding}}%;
                     }
+                    @media screen and (max-width: 375px) {
+                        .background-wrapper--{{block.id}}{
+                            width: 100%;
+                        }
+                      }
                     {%- if block.settings.background_enable_text == true -%}
                         .background-wrapper--{{block.id}}{
                             background: {{block.settings.background_color_text}};

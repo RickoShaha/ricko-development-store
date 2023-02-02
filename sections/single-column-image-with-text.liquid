@@ -32,6 +32,14 @@
             }
     {% endif %}
     
+    @media screen and (max-width: 375px) {
+        .section-wrapper-{{section.id}}{
+            width: 375px;
+            padding: 0 15px 0 15px;
+            margin: 0 auto;
+        }
+      }
+    
 
     {%- for block in section.blocks -%}
         {%- case block.type -%}
@@ -52,10 +60,21 @@
                         margin: 0;
                     }
                 {%- endif -%}
+                @media screen and (max-width: 375px) {
+                    .section-wrapper-{{section.id}} .image-wrapper-{{block.id}}.image img{
+                        width: 100%;
+                        object-fit: cover;
+                      }
+                  }
             {%- when 'spacer-block' -%}
                     .section-wrapper-{{section.id}} .spacer-wrapper-{{block.id}}{
                         height: {{block.settings.spacer_height}}px;
                     }
+                    @media screen and (max-width: 375px) {
+                        .section-wrapper-{{section.id}} .spacer-wrapper-{{block.id}}{
+                            height: 60px;
+                        }
+                      }
         {%- endcase -%}
     {%- endfor -%}
 </style>

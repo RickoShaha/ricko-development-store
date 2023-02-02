@@ -1,4 +1,3 @@
-{% comment %} jhvjhvjh {% endcomment %}
 <section class="section-wrapper-{{section.id}} double-column-image">
     {%- for block in section.blocks -%}
         {%- case block.type -%}
@@ -58,7 +57,6 @@
 
 
 <style>
-
     {% if section.settings.section_width == "custom" %}
         .section-wrapper-{{section.id}}{
             width: {{section.settings.custom_section_width}}px;
@@ -70,12 +68,9 @@
                 margin: 0 auto;
             }
     {% endif %}
-
-
     {%- for block in section.blocks -%}
         {%- case block.type -%}
             {%-when 'image'%}
-
                 {%- if section.settings.section_width == "custom" -%}
                     .section-wrapper-{{section.id}} .image-wrapper-{{block.id}}.double-image{
                         height: {{section.settings.custom_section_width | times: 0.625 }}px;
@@ -89,13 +84,11 @@
                                 flex-direction: row-reverse;
                             }
                         {%- endif -%}
-
                         {%- if block.settings.gap_enabled == true -%}
                             .section-wrapper-{{section.id}} .image-wrapper-{{block.id}}.double-image{
                                 column-gap: {{block.settings.gap_images_size}}px;
                             }
                         {%- endif -%}
-
                     {%- else -%}
                     .section-wrapper-{{section.id}} .image-wrapper-{{block.id}}.double-image{
                         height: {{section.settings.section_width | times: 0.625 }}px;
@@ -104,7 +97,6 @@
                         justify-content: center;
                         align-items: center;
                     }
-
                         {%- if block.settings.switch_images == true -%}
                             .section-wrapper-{{section.id}} .image-wrapper-{{block.id}}.double-image{
                                 flex-direction: row-reverse;
@@ -115,7 +107,6 @@
                                 column-gap: {{block.settings.gap_images_size}}px;
                             }
                         {%- endif -%}
-
                 {%-  endif -%}
                 
                 
@@ -170,7 +161,6 @@
                             }
                         {%- endif -%} {% endcomment %}
                        
-
                 {%- if block.settings.background_enable_image2 == true -%}
                     .background-image-wrapper-{{block.id}}.background-enabled-image2-{{block.id}}{
                         height: 100%;
@@ -214,14 +204,12 @@
                             object-fit: cover;
                         }
                        
-
                         .caption-wrapper-{{block.id}} .first-caption-wrapper-{{block.id}}.caption1 p{
                             text-align: {{block.settings.caption_alignment_image1}};
                         }
                         .caption-wrapper-{{block.id}} .second-caption-wrapper-{{block.id}}.caption2 p{
                             text-align: {{block.settings.caption_alignment_image2}};
                         }
-
                         {%- if block.settings.switch_images == true -%}
                             .caption-wrapper-{{block.id}}{
                                 display: flex;
@@ -233,24 +221,20 @@
                                 flex-direction: row;
                             }
                         {%- endif -%}
-
                         {%- if block.settings.gap_enabled == true -%}
                             .caption-wrapper-{{block.id}}{
                                 column-gap: {{block.settings.gap_images_size}}px;
                             }
                         {%- endif -%}
-
                         {%- if block.settings.add_caption_image1 == false and block.settings.add_caption_image2 == false -%}
                             .caption-wrapper-{{block.id}}{
                                 display: none;
                             }
                             {%- else -%}
                             
-
                             .caption-wrapper-{{block.id}} .first-caption-wrapper-{{block.id}}.caption1{
                                 width: 50%;
                             }
-
                             .caption-wrapper-{{block.id}} .second-caption-wrapper-{{block.id}}.caption2{
                                 width: 50%;
                                 font-size: {{block.settings.caption_font_size_image2}}px;
@@ -260,7 +244,6 @@
                              
 >>>>>>> 32a35aaef0738852e415b55ec63b372e4711a132
                             }
-
                             {%- if block.settings.add_caption_image1 == true -%}
                                 .caption-wrapper-{{block.id}} .first-caption-wrapper-{{block.id}}.caption1{
                                     {% comment %} width: 50%; {% endcomment %}
@@ -293,7 +276,6 @@
                                 
                             {%- endif -%}
                     
-
             {%- when 'spacer-block' -%}
                 .section-wrapper-{{section.id}} .spacer-wrapper-{{block.id}}{
                     height: {{block.settings.spacer_height}}px;
