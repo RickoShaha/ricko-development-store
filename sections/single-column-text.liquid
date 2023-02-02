@@ -18,14 +18,28 @@
         margin: 0 auto;
     }
     
+    @media screen and (max-width: 375px) {
+        .section-wrapper-{{section.id}}{
+            width: 375px;
+            padding: 0 15px 0 15px;
+            margin: 0 auto;
+        }
+      }
+    
     {%- for block in section.blocks -%}
         {%- case block.type -%}
             {%- when 'text' -%}
                 .section-wrapper-{{section.id}} .single-column-text-wrapper-{{block.id}}{
+                    width: 100%;
                     font-size: {{block.settings.paragraph_font_size}}px;
                     font-family: {{block.settings.paragraph_font_family}};
                     color: {{block.settings.paragraph_font_color}};
                 }
+                @media screen and (max-width: 375px) {
+                    .section-wrapper-{{section.id}} .single-column-text-wrapper-{{block.id}}{
+                        font-size: {%- if block.settings.paragraph_font_size>15 -%} 20px {%- endif -%};
+                    }
+                  }
             {%- when 'spacer-block' -%}
                 .section-wrapper-{{section.id}} .spacer-wrapper-{{block.id}}{
                     height: {{block.settings.spacer_height}}px;
