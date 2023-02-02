@@ -869,13 +869,44 @@
             "caption_alignment_image2": "left",
             "caption_line_height_image2": 22
           }
+        },
+        "7f49bfd7-4068-45d7-8804-5bb2166e5425": {
+          "type": "spacer-block",
+          "settings": {
+            "spacer_height": 80
+          }
         }
       },
       "block_order": [
-        "template--17629556736315__1c99b440-46d4-4481-986d-1b053e84ccd3-1675258257f7d43a4d-0"
+        "template--17629556736315__1c99b440-46d4-4481-986d-1b053e84ccd3-1675258257f7d43a4d-0",
+        "7f49bfd7-4068-45d7-8804-5bb2166e5425"
       ],
       "settings": {
         "section_width": "1200"
+      }
+    },
+    "0863654a-d180-43e8-ab70-1e896d8def5c": {
+      "type": "faq-section",
+      "blocks": {
+        "template--17641968468283__0863654a-d180-43e8-ab70-1e896d8def5c-167534535046fb955e-0": {
+          "type": "faq",
+          "settings": {
+            "question": "<p>This is the question, commodo eu quam vel hendrerit. Mauris non turpis fermentum, faucibus nulla quis, convallis nulla?<\/p>",
+            "question_font_family": "",
+            "question_font_color": "#e37730",
+            "question_font_size": 15,
+            "answer": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu euismod ante, quis finibus odio. Aenean scelerisque consectetur pharetra. In condimentum est eu eros malesuada aliquam. Aenean iaculis ligula a quam vehicula mattis. Nulla fringilla bibendum erat id molestie. Quisque id arcu in libero euismod rutrum sed ut libero. Nunc et dolor non ex elementum varius vel ut ligula. Sed id felis ex. Aenean tristique lobortis est, vitae consequat turpis sagittis varius. Quisque pharetra, dui ornare iaculis consectetur, magna velit condimentum nulla, non tristique nisl lorem ac risus. Cras accumsan eu est in dignissim. Aenean ligula felis, rutrum in augue quis, consectetur porta libero.<\/p><p>Nunc faucibus ornare risus nec accumsan. Donec sed nisi rutrum, mattis diam a, tempus risus. Morbi at lectus elementum, laoreet orci sit amet, rutrum ipsum. Integer vel aliquet risus, sed pharetra justo. Pellentesque commodo eu quam vel hendrerit. Mauris non turpis fermentum, faucibus nulla quis, convallis nulla. Ut efficitur metus eros, quis consequat nunc tincidunt et. Sed eleifend arcu vel porta cursus. Mauris ultrices mauris vel lacus hendrerit sodales. Quisque a mattis turpis. Sed nisl purus, malesuada ac ultricies iaculis, iaculis id tellus. Morbi hendrerit ipsum sit amet lacus convallis tincidunt. Praesent quis libero rutrum, pharetra ex non, tincidunt justo. Nulla facilisi.<\/p>",
+            "answer_font_family": "",
+            "answer_font_color": "#000000",
+            "answer_font_size": 15
+          }
+        }
+      },
+      "block_order": [
+        "template--17641968468283__0863654a-d180-43e8-ab70-1e896d8def5c-167534535046fb955e-0"
+      ],
+      "settings": {
+        "section_width": "600"
       }
     }
   },
@@ -895,6 +926,7 @@
     "3aaa4aec-bae3-4720-9f4c-3a051969a66c",
     "873a49d5-cb67-463a-9533-7b8fa5d8347f",
     "bfc8a6a4-92f1-4a85-9077-d24894a3dd9b",
-    "1c99b440-46d4-4481-986d-1b053e84ccd3"
+    "1c99b440-46d4-4481-986d-1b053e84ccd3",
+    "0863654a-d180-43e8-ab70-1e896d8def5c"
   ]
 }
