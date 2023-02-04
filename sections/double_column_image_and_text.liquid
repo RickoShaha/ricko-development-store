@@ -45,10 +45,9 @@
 
     {%- endif -%}
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 1200px) {
         .section-wrapper-{{section.id}}{
-            width: 375px;
-            
+            width: 100%;
             margin: 0 auto;
         }
       }
@@ -67,17 +66,23 @@
                     }
                     {%- else -%}
                     .section-wrapper-{{section.id}} .image-text-wrapper-{{block.id}}{
-                        height: {{section.settings.section_width | times: 1.25 | times: 0.01 | times: block.settings.image_size }}px;
+                        height: {{ section.settings.section_width | times: 1.25 | times: 0.01 | times: block.settings.image_size }}px;
                         width: 100%;
                         display: flex;
                         justify-content: space-between;
                         column-gap: {{block.settings.gap}}px;
                     }
                 {%- endif -%}
-                @media screen and (max-width: 375px) {
+                @media screen and (max-width: 640px) {
                     .section-wrapper-{{section.id}} .image-text-wrapper-{{block.id}}{
                         height: 100%;
                         flex-direction: column;
+                        line-height: 0px;           
+                    }
+                  }
+                  @media screen and (min-width:640px) and (max-width: 1200px) {
+                    .section-wrapper-{{section.id}} .image-text-wrapper-{{block.id}}{
+                        height: 100%;
                         line-height: 0px;           
                     }
                   }
@@ -85,10 +90,16 @@
                     .section-wrapper-{{section.id}} .image-text-wrapper-{{block.id}}{
                         flex-direction: row-reverse;    
                     }
-                    @media screen and (max-width: 375px) {
+                    @media screen and (max-width: 640px) {
                         .section-wrapper-{{section.id}} .image-text-wrapper-{{block.id}}{
                             height: 100%;
                             flex-direction: column;
+                            line-height: 0px;           
+                        }
+                      }
+                      @media screen and (min-width:640px) and (max-width: 1200px) {
+                        .section-wrapper-{{section.id}} .image-text-wrapper-{{block.id}}{
+                            height: 100%;
                             line-height: 0px;           
                         }
                       }
@@ -96,9 +107,14 @@
                     .image-wrapper-{{block.id}}{
                         width: {{block.settings.image_size}}%;
                     }
-                    @media screen and (max-width: 375px) {
+                    @media screen and (max-width: 640px) {
                         .image-wrapper-{{block.id}}{
                             width: 100%;
+                        }
+                      }
+                      @media screen and (min-width:640px) and (max-width: 900px) {
+                        .image-wrapper-{{block.id}}{
+                            width:50%;
                         }
                       }
                     .image-wrapper-{{block.id}} img{
@@ -110,9 +126,15 @@
                         width: {{100 | minus: block.settings.image_size}}%;
                         padding: {{block.settings.background_text_padding}}%;
                     }
-                    @media screen and (max-width: 375px) {
+                    @media screen and (max-width: 640px) {
                         .background-wrapper--{{block.id}}{
+                            min-height: 570px;
                             width: 100%;
+                        }
+                      }
+                    @media screen and (min-width:640px) and (max-width: 900px) {
+                        .background-wrapper--{{block.id}}{
+                            width: 50%;
                         }
                       }
                     {%- if block.settings.background_enable_text == true -%}

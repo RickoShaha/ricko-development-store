@@ -2,14 +2,16 @@
     {%- for block in section.blocks -%}
         {%- case block.type -%}
             {%-when 'image'%}
-                <div class="image-wrapper-{{block.id}} image">
-                    <img src="{{block.settings.image_with_text_image | img_url: 'master'}}">
-                </div>
-                {%- if block.settings.add_captioin == true -%}
-                    <div class="text-wrapper-{{block.id}}">
-                        {{block.settings.caption}}
+                <div class="image-text-wrapper-{{block.id}} image-text">
+                    <div class="image-wrapper-{{block.id}} image">
+                        <img src="{{block.settings.image_with_text_image | img_url: 'master'}}">
                     </div>
-                {%- endif -%}
+                    {%- if block.settings.add_captioin == true -%}
+                        <div class="text-wrapper-{{block.id}} text">
+                            {{block.settings.caption}}
+                        </div>
+                    {%- endif -%}
+                </div>
             {%- when 'spacer-block' -%}
                 <div class="spacer-wrapper-{{block.id}}">
                 
@@ -32,9 +34,9 @@
             }
     {% endif %}
     
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 1200px) {
         .section-wrapper-{{section.id}}{
-            width: 375px;
+            width: 100%;
             padding: 0 15px 0 15px;
             margin: 0 auto;
         }
@@ -44,6 +46,12 @@
     {%- for block in section.blocks -%}
         {%- case block.type -%}
             {%-when 'image'%}
+            .section-wrapper-{{section.id}} .image-text-wrapper-{{block.id}}.image-text {
+                width: 100%;
+            }
+            .section-wrapper-{{section.id}} .image-wrapper-{{block.id}}.image{
+                width: 100%;
+              }
             .section-wrapper-{{section.id}} .image-wrapper-{{block.id}}.image img{
                 width: 100%;
                 object-fit: cover;
@@ -60,17 +68,29 @@
                         margin: 0;
                     }
                 {%- endif -%}
-                @media screen and (max-width: 375px) {
-                    .section-wrapper-{{section.id}} .image-wrapper-{{block.id}}.image img{
+                @media screen and (max-width: 1200px) {
+                    .section-wrapper-{{section.id}} .image-wrapper-{{block.id}}.image{
                         width: 100%;
                         object-fit: cover;
+                      }
+                  }
+                  @media screen and (min-width: 640px) and (max-width: 1200px) {
+                    .section-wrapper-{{section.id}} .image-text-wrapper-{{block.id}}.image-text{
+                        {%- if section.settings.section_width == "600" -%}
+                            width: 50%; 
+                            {% elsif section.settings.section_width == "967" %}
+                            width: 80%; 
+                            {% elsif section.settings.section_width == "1200" %}
+                            width: 100%;
+                        {%- endif -%}
+                        margin: 0 auto;
                       }
                   }
             {%- when 'spacer-block' -%}
                     .section-wrapper-{{section.id}} .spacer-wrapper-{{block.id}}{
                         height: {{block.settings.spacer_height}}px;
                     }
-                    @media screen and (max-width: 375px) {
+                    @media screen and (max-width: 640px) {
                         .section-wrapper-{{section.id}} .spacer-wrapper-{{block.id}}{
                             height: 60px;
                         }
