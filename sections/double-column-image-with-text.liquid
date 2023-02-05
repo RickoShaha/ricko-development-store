@@ -2,48 +2,50 @@
     {%- for block in section.blocks -%}
         {%- case block.type -%}
             {%-when 'image'%}
-                <div class="image-wrapper-{{block.id}} double-image">
+                <div class="image-caption-wrapper-{{block.id}} image-caption">
+                    <div class="image-wrapper-{{block.id}} double-image">
+                        
                     
-                
-                {%- if block.settings.background_enable_image1 == true -%}
-                    <div class="background-image-wrapper-{{block.id}} background-enabled-image1-{{block.id}}">
-                {%- endif -%}
+                    {%- if block.settings.background_enable_image1 == true -%}
+                        <div class="background-image-wrapper-{{block.id}} background-enabled-image1-{{block.id}}">
+                    {%- endif -%}
+                        
                     
-                
-                        <div class="image-wrapper-{{block.id}} image1">
-                            <img src="{{block.settings.first_image | img_url: 'master'}}">
+                            <div class="image-wrapper-{{block.id}} image1">
+                                <img src="{{block.settings.first_image | img_url: 'master'}}">
+                            </div>
+
+                            
+                            
+                    {%- if block.settings.background_enable_image1 == true -%}
                         </div>
+                    {%- endif -%}
 
+                    {%- if block.settings.background_enable_image2 == true -%}
+                        <div class="background-image-wrapper-{{block.id}} background-enabled-image2-{{block.id}}">
+                    {%- endif -%}
+                            <div class="image-wrapper-{{block.id}} image2">
+                                <img src="{{block.settings.second_image | img_url: 'master'}}">
+                            </div>
                         
-                        
-                {%- if block.settings.background_enable_image1 == true -%}
-                    </div>
-                {%- endif -%}
-
-                {%- if block.settings.background_enable_image2 == true -%}
-                    <div class="background-image-wrapper-{{block.id}} background-enabled-image2-{{block.id}}">
-                {%- endif -%}
-                        <div class="image-wrapper-{{block.id}} image2">
-                            <img src="{{block.settings.second_image | img_url: 'master'}}">
+                    {%- if block.settings.background_enable_image2 == true -%}
                         </div>
-                       
-                {%- if block.settings.background_enable_image2 == true -%}
-                    </div>
-                {%- endif -%}
-                    
-                </div>
-
-                <div class="caption-wrapper-{{block.id}}">
-                    <div class="first-caption-wrapper-{{block.id}} caption1">
-
-                        
-                            {{block.settings.caption_image1}}
+                    {%- endif -%}
                         
                     </div>
-                    <div class="second-caption-wrapper-{{block.id}} caption2">
-                        
-                            {{block.settings.caption_image2}}
-                        
+
+                    <div class="caption-wrapper-{{block.id}}">
+                        <div class="first-caption-wrapper-{{block.id}} caption1">
+
+                            
+                                {{block.settings.caption_image1}}
+                            
+                        </div>
+                        <div class="second-caption-wrapper-{{block.id}} caption2">
+                            
+                                {{block.settings.caption_image2}}
+                            
+                        </div>
                     </div>
                 </div>
             {%- when 'spacer-block' -%}
@@ -79,8 +81,12 @@
         {%- case block.type -%}
             {%-when 'image'%}
                 {%- if section.settings.section_width == "custom" -%}
+                    .image-caption-wrapper-{{block.id}}.image-caption{
+                        width: {{section.settings.section_width}}px;
+                        margin: 0 auto;
+                    }
                     .section-wrapper-{{section.id}} .image-wrapper-{{block.id}}.double-image{
-                        {% comment %} height: {{section.settings.custom_section_width | times: 0.625 }}px; {% endcomment %}
+                        height: {{section.settings.custom_section_width | times: 0.625 }}px;
                         width: 100%;
                         display: flex;
                         justify-content: center;
@@ -98,12 +104,13 @@
                         {%- endif -%}
                     {%- else -%}
                     .section-wrapper-{{section.id}} .image-wrapper-{{block.id}}.double-image{
-                        {% comment %} height: {{section.settings.section_width | times: 0.625 }}px; {% endcomment %}
+                        height: {{section.settings.section_width | times: 0.625 }}px;
                         width: 100%;
                         display: flex;
                         justify-content: center;
                         align-items: center;
                     }
+                    
                         {%- if block.settings.switch_images == true -%}
                             .section-wrapper-{{section.id}} .image-wrapper-{{block.id}}.double-image{
                                 flex-direction: row-reverse;
@@ -118,6 +125,10 @@
 
                 {%- if section.settings.section_width == "967" or section.settings.section_width == "1200" -%}
                     @media screen and (max-width: 640px) {
+                        .image-caption-wrapper-{{block.id}}.image-caption{
+                            width: 100%;
+                            margin: 0 auto;
+                        }
                         .section-wrapper-{{section.id}} .image-wrapper-{{block.id}}.double-image{
                             height: 100%;
                             flex-direction: column;
@@ -125,6 +136,10 @@
                     }
                     {%- else -%}
                     @media screen and (max-width: 375px) {
+                        .image-caption-wrapper-{{block.id}}.image-caption{
+                            width: 100%;
+                            margin: 0 auto;
+                        }
                         .section-wrapper-{{section.id}} .image-wrapper-{{block.id}}.double-image{
                             height: 100%;
                             width: 100%;
@@ -132,26 +147,43 @@
                         }
                     }
                     @media screen and (min-width: 376px) and (max-width: 450px) {
+                        .image-caption-wrapper-{{block.id}}.image-caption{
+                            width: 100%;
+                            margin: 0 auto;
+                        }
                         .section-wrapper-{{section.id}} .image-wrapper-{{block.id}}.double-image{
                             max-height: 275px;
                         }
                         
                     }
                     @media screen and (min-width: 451px) and (max-width: 555px) {
+                        .image-caption-wrapper-{{block.id}}.image-caption{
+                            width: 100%;
+                            margin: 0 auto;
+                        }
                         .section-wrapper-{{section.id}} .image-wrapper-{{block.id}}.double-image{
                             max-height: 325px;
                         }
                         
                     }
                     @media screen and (min-width: 556px) and (max-width: 640px) {
+                        .image-caption-wrapper-{{block.id}}.image-caption{
+                            width: 100%;
+                            margin: 0 auto;
+                        }
                         .section-wrapper-{{section.id}} .image-wrapper-{{block.id}}.double-image{
                             max-height: 375px;
                         }
                         
                     }
                     @media screen and (min-width: 641px) and (max-width: 1200px) {
+                        .image-caption-wrapper-{{block.id}}.image-caption{
+                            width: 600px;
+                            margin: 0 auto;
+                        }
                         .section-wrapper-{{section.id}} .image-wrapper-{{block.id}}.double-image{
-                            height: auto;
+                            width: 600px;
+                            margin: 0 auto;
                         }
                         
                     }
@@ -179,7 +211,33 @@
                             }
                         }
                         {%- else -%}
-                        @media screen and (max-width: 640px) {
+                        
+                         @media screen and (min-width: 376px) and (max-width: 450px) {
+                            .background-image-wrapper-{{block.id}}.background-enabled-image1-{{block.id}}{
+                            max-height: 275px;
+                        }
+                        
+                        }
+                        @media screen and (min-width: 451px) and (max-width: 555px) {
+                            .background-image-wrapper-{{block.id}}.background-enabled-image1-{{block.id}}{
+                                max-height: 325px;
+                            }
+                            
+                        }
+                        @media screen and (min-width: 556px) and (max-width: 640px) {
+                            .background-image-wrapper-{{block.id}}.background-enabled-image1-{{block.id}}{
+                                max-height: 375px;
+                            }
+                            
+                        }
+                        @media screen and (min-width: 641px) and (max-width: 1200px) {
+                            .background-image-wrapper-{{block.id}}.background-enabled-image1-{{block.id}}{
+                                height: auto;
+                            }
+                            
+                        }
+
+                        {% comment %} @media screen and (max-width: 640px) {
                             .background-image-wrapper-{{block.id}}.background-enabled-image1-{{block.id}}{
                                 width: 50%;
                             }
@@ -188,7 +246,7 @@
                             .background-image-wrapper-{{block.id}}.background-enabled-image1-{{block.id}}{
                                 width: 50%;
                             }
-                        }
+                        } {% endcomment %}
                     {%- endif -%}
                         {%- if section.settings.section_width == "custom" -%}
                             .image-wrapper-{{block.id}}.image1{

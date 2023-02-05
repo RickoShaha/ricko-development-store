@@ -34,10 +34,17 @@
                     font-size: {{block.settings.paragraph_font_size}}px;
                     font-family: {{block.settings.paragraph_font_family}};
                     color: {{block.settings.paragraph_font_color}};
+                    margin: 0 auto;
                 }
-                @media screen and (max-width: 1200px) {
+                @media screen and (min-width: 768px) and (max-width: 1200px) {
                     .section-wrapper-{{section.id}} .single-column-text-wrapper-{{block.id}}{
+                        {%- if section.settings.section_width == "600" -%}
+                            width: 50%;
+                            {%- elsif  section.settings.section_width == "967"-%}
+                            width: 80%;
+                        {%- endif -%}
                         font-size: {%- if block.settings.paragraph_font_size>15 -%} 20px {%- endif -%};
+                        margin: 0 auto;
                     }
                   }
             {%- when 'spacer-block' -%}
