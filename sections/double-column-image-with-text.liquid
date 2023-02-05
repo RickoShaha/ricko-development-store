@@ -1,63 +1,3 @@
-<section class="section-wrapper-{{section.id}} double-column-image">
-    {%- for block in section.blocks -%}
-        {%- case block.type -%}
-            {%-when 'image'%}
-                <div class="image-caption-wrapper-{{block.id}} image-caption">
-                    <div class="image-wrapper-{{block.id}} double-image">
-                        
-                    
-                    {%- if block.settings.background_enable_image1 == true -%}
-                        <div class="background-image-wrapper-{{block.id}} background-enabled-image1-{{block.id}}">
-                    {%- endif -%}
-                        
-                    
-                            <div class="image-wrapper-{{block.id}} image1">
-                                <img src="{{block.settings.first_image | img_url: 'master'}}">
-                            </div>
-
-                            
-                            
-                    {%- if block.settings.background_enable_image1 == true -%}
-                        </div>
-                    {%- endif -%}
-
-                    {%- if block.settings.background_enable_image2 == true -%}
-                        <div class="background-image-wrapper-{{block.id}} background-enabled-image2-{{block.id}}">
-                    {%- endif -%}
-                            <div class="image-wrapper-{{block.id}} image2">
-                                <img src="{{block.settings.second_image | img_url: 'master'}}">
-                            </div>
-                        
-                    {%- if block.settings.background_enable_image2 == true -%}
-                        </div>
-                    {%- endif -%}
-                        
-                    </div>
-
-                    <div class="caption-wrapper-{{block.id}}">
-                        <div class="first-caption-wrapper-{{block.id}} caption1">
-
-                            
-                                {{block.settings.caption_image1}}
-                            
-                        </div>
-                        <div class="second-caption-wrapper-{{block.id}} caption2">
-                            
-                                {{block.settings.caption_image2}}
-                            
-                        </div>
-                    </div>
-                </div>
-            {%- when 'spacer-block' -%}
-                <div class="spacer-wrapper-{{block.id}}">
-                
-                </div>
-        {%- endcase -%}
-    {%- endfor -%}
-</section>
-
-
-
 <style>
     {% if section.settings.section_width == "custom" %}
         .section-wrapper-{{section.id}}{
@@ -431,7 +371,63 @@
     {%- endfor -%}
 </style>
 
+<div class="section-wrapper-{{section.id}} double-column-image">
+    {%- for block in section.blocks -%}
+        {%- case block.type -%}
+            {%-when 'image'%}
+                <div class="image-caption-wrapper-{{block.id}} image-caption">
+                    <div class="image-wrapper-{{block.id}} double-image">
+                        
+                    
+                    {%- if block.settings.background_enable_image1 == true -%}
+                        <div class="background-image-wrapper-{{block.id}} background-enabled-image1-{{block.id}}">
+                    {%- endif -%}
+                        
+                    
+                            <div class="image-wrapper-{{block.id}} image1">
+                                <img src="{{block.settings.first_image | img_url: 'master'}}">
+                            </div>
 
+                            
+                            
+                    {%- if block.settings.background_enable_image1 == true -%}
+                        </div>
+                    {%- endif -%}
+
+                    {%- if block.settings.background_enable_image2 == true -%}
+                        <div class="background-image-wrapper-{{block.id}} background-enabled-image2-{{block.id}}">
+                    {%- endif -%}
+                            <div class="image-wrapper-{{block.id}} image2">
+                                <img src="{{block.settings.second_image | img_url: 'master'}}">
+                            </div>
+                        
+                    {%- if block.settings.background_enable_image2 == true -%}
+                        </div>
+                    {%- endif -%}
+                        
+                    </div>
+
+                    <div class="caption-wrapper-{{block.id}}">
+                        <div class="first-caption-wrapper-{{block.id}} caption1">
+
+                            
+                                {{block.settings.caption_image1}}
+                            
+                        </div>
+                        <div class="second-caption-wrapper-{{block.id}} caption2">
+                            
+                                {{block.settings.caption_image2}}
+                            
+                        </div>
+                    </div>
+                </div>
+            {%- when 'spacer-block' -%}
+                <div class="spacer-wrapper-{{block.id}}">
+                
+                </div>
+        {%- endcase -%}
+    {%- endfor -%}
+</div>
 
 
 {% schema %}

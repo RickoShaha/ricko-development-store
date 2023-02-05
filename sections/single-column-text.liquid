@@ -1,16 +1,3 @@
-<section class="section-wrapper-{{section.id}} single-column-text {{section.settings.content_alignment}}">
-    {%- for block in section.blocks -%}
-        {%- case block.type -%}
-            {%- when 'text' -%}
-                <div class="single-column-text-wrapper-{{block.id}}">{{block.settings.paragraph}}</div>
-            {%- when 'spacer-block' -%}
-                <div class="spacer-wrapper-{{block.id}}">
-                
-                </div>
-        {%- endcase -%}
-    {%- endfor -%}
-</section>
-
 <style>
     .section-wrapper-{{section.id}}{
 
@@ -54,6 +41,19 @@
         {%- endcase -%}
     {%- endfor -%}
 </style>
+
+<div class="section-wrapper-{{section.id}} single-column-text {{section.settings.content_alignment}}">
+    {%- for block in section.blocks -%}
+        {%- case block.type -%}
+            {%- when 'text' -%}
+                <div class="single-column-text-wrapper-{{block.id}}">{{block.settings.paragraph}}</div>
+            {%- when 'spacer-block' -%}
+                <div class="spacer-wrapper-{{block.id}}">
+                
+                </div>
+        {%- endcase -%}
+    {%- endfor -%}
+</div>
 
 {% schema %}
 {

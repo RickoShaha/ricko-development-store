@@ -1,35 +1,3 @@
-<section class="section-wrapper-{{section.id}}">
-    {%- for block in section.blocks -%}
-        {% case block.type %}
-            {%- when 'image' -%}
-                <div class="image-text-wrapper-{{block.id}}">
-                    <div class="image-wrapper-{{block.id}}">
-                        <img src="{{block.settings.image | img_url: 'master'}}">
-                    </div>
-                    <div class="background-wrapper--{{block.id}}">
-                        {%- if block.settings.include_header == true -%}
-                            <div class="header-wrapper-{{block.id}}">
-                                <{{block.settings.header_size}}>
-                                    {{block.settings.header}}
-                                </{{block.settings.header_size}}>
-                            </div>
-                        {%- endif -%}
-                        <div class="text-wrapper-{{block.id}}">
-                            {{block.settings.text}}
-                        </div>
-                        {%- if block.settings.add_button == true -%}
-                            <button class="btn ">Shop The Look</button>
-                        {%- endif -%}
-                    </div>
-                </div>
-            {%- when 'spacer-block' -%}
-                <div class="spacer-wrapper-{{block.id}}">
-                    
-                </div>
-        {% endcase %}
-    {%- endfor -%}
-</section>
-
 <style>
     {% if section.settings.section_width == "custom" %}
         .section-wrapper-{{section.id}}{
@@ -177,6 +145,38 @@
         {% endcase %}
     {%- endfor -%}
 </style>
+
+<div class="section-wrapper-{{section.id}}">
+    {%- for block in section.blocks -%}
+        {% case block.type %}
+            {%- when 'image' -%}
+                <div class="image-text-wrapper-{{block.id}}">
+                    <div class="image-wrapper-{{block.id}}">
+                        <img src="{{block.settings.image | img_url: 'master'}}">
+                    </div>
+                    <div class="background-wrapper--{{block.id}}">
+                        {%- if block.settings.include_header == true -%}
+                            <div class="header-wrapper-{{block.id}}">
+                                <{{block.settings.header_size}}>
+                                    {{block.settings.header}}
+                                </{{block.settings.header_size}}>
+                            </div>
+                        {%- endif -%}
+                        <div class="text-wrapper-{{block.id}}">
+                            {{block.settings.text}}
+                        </div>
+                        {%- if block.settings.add_button == true -%}
+                            <button class="btn ">Shop The Look</button>
+                        {%- endif -%}
+                    </div>
+                </div>
+            {%- when 'spacer-block' -%}
+                <div class="spacer-wrapper-{{block.id}}">
+                    
+                </div>
+        {% endcase %}
+    {%- endfor -%}
+</div>
 
 {% schema %}
     {
