@@ -1,0 +1,213 @@
+{% style %}
+
+.section-wrapper-{{section.id}}.multicolumn{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0px {{section.settings.padding_size}}px;
+}
+.section-wrapper-{{section.id}}.multicolumn .column-wrappers{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+}
+
+
+{% for block in section.blocks %}
+    {% case block.type %}
+        {% when 'text' %}
+
+            .block-wrapper-{{block.id}}.column{
+                display: flex;
+                flex-direction: column;
+                justify-content:  center;
+                border: 2px solid red;
+                width: 33.33%;
+                padding-right: 55px; 
+            }
+
+            .block-wrapper-{{block.id}}.column p{
+                margin: 0;
+            }
+
+
+
+            .header-wrapper-{{block.id}}.header{
+                display: block;
+                font-size: {{block.settings.header_font_size}}px;
+                font-family: 'Silvana';
+                color: {{block.settings.header_font_color}};
+            }
+
+            .header{
+                padding: 0;
+            }
+            
+                {% if block.settings.sub_header_enable == true %}
+                    .subHeader-wrapper-{{block.id}}.subHeader{
+                        font-size: {{block.settings.sub_header_font_size}}px;
+                        font-family: 'Intervogue';
+                        color: {{block.settings.sub_header_font_color}};
+                        text-transform: uppercase;
+                    }
+                {%endif%}
+
+            .description-wrapper-{{block.id}}.description{
+                font-size: {{block.settings.description_font_size}}px;
+                font-family: 'Intervogue';
+                color: {{block.settings.description_font_color}};
+            }
+                
+    {% endcase %}
+{% endfor %}
+    
+{% endstyle %}
+
+<div class="section-wrapper-{{section.id}} multicolumn">
+    <div class="column-wrappers">
+        {% for block in section.blocks %}
+            {% case block.type %}
+                {% when 'text' %}
+                    
+                    <div class="block-wrapper-{{block.id}} column">
+                        <div class="header-wrapper-{{block.id}} header">
+                            {{block.settings.header}}
+                        </div>
+                        {% if block.settings.sub_header_enable == true %}
+                            <div class="subHeader-wrapper-{{block.id}} subHeader">
+                                {{block.settings.sub_header}}
+                            </div>
+                        {%endif%}
+                        <div class="description-wrapper-{{block.id}} description">
+                            {{block.settings.description}}
+                        </div>
+                    </div>
+                        
+            {% endcase %}
+        {% endfor %}
+    </div>
+</div>
+
+
+{% schema %}
+    {
+        "name": "np-multicolumn",
+        "tag": "section",
+        "settings": [
+            {
+                "type": "range",
+                "id": "padding_size",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "label": "Padding Size",
+                "default": 16
+            }   
+        
+        ],
+        "blocks":  [
+            {
+                "type": "text",
+                "name": "Text Content",
+                "settings": [
+                    {
+                        "type": "header",
+                        "content": "Header Settings"
+                    },                      
+                    {
+                        "type": "richtext",
+                        "id": "header",
+                        "label": "Header Text"
+                    },
+                    {
+                        "type": "color",
+                        "id": "header_font_color",
+                        "label": "Header Font Color",
+                        "default": "#000000"
+                    },
+                    {
+                        "type": "range",
+                        "id": "header_font_size",
+                        "min": 10,
+                        "max": 100,
+                        "step": 1,
+                        "unit": "px",
+                        "label": "Header Font size",
+                        "default": 24
+                    },  
+
+                    {
+                        "type": "checkbox",
+                        "id": "sub_header_enable",
+                        "label": "Enable Sub Header",
+                        "info": "Checking this true includes sub header",
+                        "default": false
+                    },
+                    
+                    {
+                        "type": "header",
+                        "content": "Sub Header Settings"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "sub_header",
+                        "label": "Sub Header"
+                    },
+                    {
+                        "type": "color",
+                        "id": "sub_header_font_color",
+                        "label": "Sub Header Font Color",
+                        "default": "#000000"
+                    },
+                    {
+                        "type": "range",
+                        "id": "sub_header_font_size",
+                        "min": 12,
+                        "max": 24,
+                        "step": 1,
+                        "unit": "px",
+                        "label": "Sub Header Font size",
+                        "default": 16
+                    },
+
+                    {
+                        "type": "header",
+                        "content": "Description Settings"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "description",
+                        "label": "Description"
+                    },
+                    {
+                        "type": "color",
+                        "id": "description_font_color",
+                        "label": "Description Font Color",
+                        "default": "#000000"
+                    },
+                    {
+                        "type": "range",
+                        "id": "description_font_size",
+                        "min": 12,
+                        "max": 24,
+                        "step": 1,
+                        "unit": "px",
+                        "label": "Description Font size",
+                        "default": 16
+                    }
+                ]
+            }
+        ],
+        "presets" : [
+            {
+                "name": "Ninety Percent Multicolumn",
+                "blocks":[
+                    {
+                        "type": "text"
+                    }
+                ]
+            }
+        ]
+    }
+{% endschema %}
